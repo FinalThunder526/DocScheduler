@@ -6,18 +6,23 @@ import com.amazonaws.auth.CognitoCachingCredentialsProvider;
 import com.amazonaws.regions.Regions;
 import com.facebook.Session;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends FragmentActivity {
-	private FacebookLoginFragment mFragment;
+	private Fragment mFragment;
 
-	public static final String AWS_ACCOUNT_ID = "597338470137";
-	public static final String AWS_COGNITO_DOCIDENTITYPOOL = "us-east-1:8e74cb73-4864-4587-abc6-b10b05cf44ee";
-	public static final String AWS_UNAUTHROLE = "arn:aws:iam::"
-			+ AWS_ACCOUNT_ID + ":role/Cognito_DocSchedulerAuth_DefaultRole";
-	public static final String AWS_AUTHROLE = "arn:aws:iam::" + AWS_ACCOUNT_ID
-			+ ":role/Cognito_DocSchedulerAuth_DefaultRole";
+	boolean isAWS = false;
+
+	Button createObjectBtn, signupBtn;
+	EditText userText, passText;
+	ParseApplication myApp;
 
 	/*
 	 * CognitoCachingCredentialsProvider mProvider = new
@@ -30,23 +35,35 @@ public class MainActivity extends FragmentActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		if (savedInstanceState == null) {
-			mFragment = new FacebookLoginFragment();
-			getSupportFragmentManager().beginTransaction()
-					.add(android.R.id.content, mFragment).commit();
+		if (isAWS) {
+			if (savedInstanceState == null) {
+				mFragment = new LoginFragment();
+				getSupportFragmentManager().beginTransaction()
+						.add(android.R.id.content, mFragment).commit();
+			} else {
+				mFragment = (LoginFragment) getSupportFragmentManager()
+						.findFragmentById(android.R.id.content);
+			}
 		} else {
-			mFragment = (FacebookLoginFragment) getSupportFragmentManager()
-					.findFragmentById(android.R.id.content);
-		}
-	}
+			setContentView(R.layout.activity_parse);
 
-	/**
-	 * Attaching Facebook login details to Amazon
-	 */
-	private void onLoggedIn() {
-		Map<String, String> logins = new HashMap<String, String>();
-		logins.put("graph.facebook.com", Session.getActiveSession()
-				.getAccessToken());
-		//mProvider.withLogins(logins);
+			myApp = (ParseApplication) getApplication();
+
+			createObjectBtn = (Button) findViewById(R.id.createObjectBtn);
+			createObjectBtn.setOnClickListener(new OnClickListener() {
+				public void onClick(View v) {
+					myApp.testObjects();
+				}
+			});
+			userText = (EditText) findViewById(R.id.username);
+			passText = (EditText) findViewById(R.id.password);
+			signupBtn = (Button) findViewById(R.id.signUpBtn);
+			signupBtn.setOnClickListener(new OnClickListener() {
+				public void onClick(View v) {
+					myApp.signUp(userText.getText().toString(), passText
+							.getText().toString());
+				}
+			});
+		}
 	}
 }

@@ -29,7 +29,7 @@ import com.facebook.model.GraphUser;
 import com.facebook.widget.LoginButton;
 import com.facebook.widget.ProfilePictureView;
 
-public class LoginFragment extends Fragment {
+public class AWSLoginFragment extends Fragment {
 	private static final String TAG = "LoginFragment";
 
 	public static final String AWS_ACCOUNT_ID = "597338470137";
@@ -86,7 +86,7 @@ public class LoginFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.activity_main, container, false);
+		View view = inflater.inflate(R.layout.activity_login, container, false);
 		loginName = (TextView) view.findViewById(R.id.loginName);
 		profilePictureView = (ProfilePictureView) view
 				.findViewById(R.id.profilePicture);

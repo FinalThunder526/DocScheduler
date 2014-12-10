@@ -16,9 +16,6 @@ public class ParseApplication extends Application {
 	public static final String APP_ID = "dWW73hZiUfeSRc3S5fkxkb8hjPiH7p519Tcq3Tja";
 	public static final String CLIENT_KEY = "DTG5Zm0uoOjNaQZMqhpPd5XQiiYRE92VAdwiPXQe";
 
-	ParseUser mUser;
-	ProgressDialog mDialog;
-
 	@Override
 	public void onCreate() {
 		super.onCreate();
@@ -35,41 +32,6 @@ public class ParseApplication extends Application {
 
 		ParseACL.setDefaultACL(defaultACL, true);
 
-		mUser = null;
 	}
 
-	public void testObjects() {
-		// Test code
-		ParseObject testObject = new ParseObject("TestObject2");
-		testObject.put("foo", "foo-value2");
-		testObject.put("foo2", 32094);
-		testObject.put("baz", false);
-		testObject.saveInBackground();
-
-		Toast.makeText(this, "Test Object created", Toast.LENGTH_SHORT).show();
-	}
-
-	public void signUp(String username, String pass) {
-		if (mUser == null) {
-			mDialog = ProgressDialog.show(this, "Signing up...", "");
-
-			mUser = new ParseUser();
-			mUser.setUsername(username);
-			mUser.setPassword(pass);
-
-			mUser.signUpInBackground(new SignUpCallback() {
-				@Override
-				public void done(ParseException e) {
-					mDialog.dismiss();
-					if (e == null) {
-						Toast.makeText(ParseApplication.this, "User created!",
-								Toast.LENGTH_SHORT).show();
-					} else {
-						Toast.makeText(ParseApplication.this, e.getMessage(),
-								Toast.LENGTH_SHORT).show();
-					}
-				}
-			});
-		}
-	}
 }

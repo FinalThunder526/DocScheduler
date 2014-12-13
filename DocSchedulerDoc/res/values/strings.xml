@@ -7,5 +7,7 @@
     <string name="facebook_app_id">1536310793281170</string>
     <string name="facebook_login">Facebook Login</string>
     <string name="login_name_default">No login</string>
+    <string name="signup_pass_hint">Password (6+ characters)</string>
+    <string name="public_info">I recognize that all the information herein (other than the password) is public information.</string>
 
 </resources>

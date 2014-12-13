@@ -44,7 +44,7 @@ public class LoginActivity extends FragmentActivity {
 	 */
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
 		if (isAWS)
@@ -82,6 +82,21 @@ public class LoginActivity extends FragmentActivity {
 				}
 			});
 		}
+	}
+
+	public void onResume() {
+		super.onResume();
+		ParseUser user = ParseUser.getCurrentUser();
+		if (user != null && user.getSessionToken() != null) {
+			// User already logged in; probably from the signup sequence.
+			Intent intent = new Intent(this, HomeActivity.class);
+			startActivity(intent);
+			finish();
+		}
+	}
+
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+
 	}
 
 	/**

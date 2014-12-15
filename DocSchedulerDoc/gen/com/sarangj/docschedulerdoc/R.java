@@ -1342,7 +1342,6 @@ containing a value of this type.
         public static final int dialog=0x7f0b0016;
         public static final int disableHome=0x7f0b000b;
         public static final int dropdown=0x7f0b0017;
-        public static final int editPlace=0x7f0b0046;
         public static final int editSchedBtn=0x7f0b004a;
         public static final int edit_query=0x7f0b0032;
         public static final int end=0x7f0b0019;
@@ -1357,7 +1356,7 @@ containing a value of this type.
         public static final int icon=0x7f0b002c;
         public static final int ifRoom=0x7f0b0013;
         public static final int image=0x7f0b0029;
-        public static final int isDeleting=0x7f0b0047;
+        public static final int isDeleting=0x7f0b0046;
         public static final int isEmailValidBar=0x7f0b0059;
         public static final int large=0x7f0b0006;
         public static final int listMode=0x7f0b0009;
@@ -1386,6 +1385,7 @@ containing a value of this type.
         public static final int radio=0x7f0b0031;
         public static final int saveDayTime=0x7f0b0043;
         public static final int savePlace=0x7f0b003f;
+        public static final int saveSchedule=0x7f0b0047;
         public static final int scrollView1=0x7f0b0057;
         public static final int search_badge=0x7f0b0034;
         public static final int search_bar=0x7f0b0033;
@@ -1538,7 +1538,7 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f070025;
-        public static final int action_settings=0x7f070029;
+        public static final int action_settings=0x7f07002c;
         public static final int app_name=0x7f070027;
         public static final int com_facebook_choose_friends=0x7f07000f;
         public static final int com_facebook_dialogloginactivity_ok_button=0x7f070000;
@@ -1566,12 +1566,15 @@ containing a value of this type.
         public static final int com_facebook_usersettingsfragment_log_in_button=0x7f070008;
         public static final int com_facebook_usersettingsfragment_logged_in=0x7f070009;
         public static final int com_facebook_usersettingsfragment_not_logged_in=0x7f07000a;
-        public static final int facebook_app_id=0x7f07002a;
-        public static final int facebook_login=0x7f07002b;
-        public static final int hello_world=0x7f070028;
-        public static final int login_name_default=0x7f07002c;
-        public static final int public_info=0x7f07002e;
-        public static final int signup_pass_hint=0x7f07002d;
+        public static final int edit_place_name=0x7f07002a;
+        public static final int edit_sched_name=0x7f070029;
+        public static final int facebook_app_id=0x7f07002d;
+        public static final int facebook_login=0x7f07002e;
+        public static final int hello_world=0x7f07002b;
+        public static final int home_name=0x7f070028;
+        public static final int login_name_default=0x7f07002f;
+        public static final int public_info=0x7f070031;
+        public static final int signup_pass_hint=0x7f070030;
     }
     public static final class style {
         /** 

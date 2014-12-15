@@ -24,9 +24,9 @@ import android.widget.*;
 public class HomeActivity extends Activity {
 	ParseUser mUser;
 
-	private static DocSchedule mSchedule;
+	private static Schedule mSchedule;
 
-	public static DocSchedule getSchedule() {
+	public static Schedule getSchedule() {
 		return mSchedule;
 	}
 
@@ -37,7 +37,7 @@ public class HomeActivity extends Activity {
 		super.onCreate(savedInstanceState);
 
 		mUser = ParseUser.getCurrentUser();
-		mSchedule = new DocSchedule();
+		mSchedule = new Schedule();
 
 		if (mUser == null || mUser.getSessionToken() == null) {
 			Intent intent = new Intent(this, LoginActivity.class);
@@ -73,14 +73,14 @@ public class HomeActivity extends Activity {
 	public void savePlaces(View v) {
 		final ParseObject place1 = new ParseObject("Place"), place2 = new ParseObject(
 				"Place");
-		place1.put(DocSchedule.PLACENAME_KEY, "Medicare");
+		place1.put(Schedule.PLACENAME_KEY, "Medicare");
 		place1.addAll("days", Arrays.asList(0, 1, 2, 3, 4));
 		place1.addAll("starts",
 				Arrays.asList("04:00", "04:00", "04:00", "04:00", "04:00"));
 		place1.addAll("ends",
 				Arrays.asList("05:00", "05:00", "05:00", "05:00", "05:00"));
 		place1.saveInBackground();
-		place2.put(DocSchedule.PLACENAME_KEY, "Private");
+		place2.put(Schedule.PLACENAME_KEY, "Private");
 		place2.addAll("days", Arrays.asList(0, 1));
 		place2.addAll("starts", Arrays.asList("05:30", "06:30"));
 		place2.addAll("ends", Arrays.asList("06:30", "07:30"));
@@ -123,10 +123,16 @@ public class HomeActivity extends Activity {
 
 	public void editSched(View v) {
 		Intent intent = new Intent(this, EditScheduleActivity.class);
-		startActivity(intent);
+		startActivityForResult(intent, 0);
 	}
 
 	private void toast(String s) {
 		Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
+	}
+
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if (resultCode == RESULT_OK) {
+			mSchedule.saveToParse(mUser);
+		}
 	}
 }

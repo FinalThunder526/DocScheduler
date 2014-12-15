@@ -6,27 +6,24 @@
 
 package com.sarangj.docschedulerdoc;
 
-import java.util.Calendar;
-
 import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.app.TimePickerDialog.OnTimeSetListener;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
-import android.text.format.DateFormat;
-import android.widget.TimePicker;
 
 public class TimePickerFragment extends DialogFragment {
 	OnTimeSetListener l;
 
-	public TimePickerFragment(OnTimeSetListener newL) {
+	int hr, min;
+
+	public TimePickerFragment(OnTimeSetListener newL, int hr, int min) {
 		l = newL;
+		this.hr = hr;
+		this.min = min;
 	}
 
 	public Dialog onCreateDialog(Bundle savedInstanceState) {
-		final Calendar c = Calendar.getInstance();
-
-		return new TimePickerDialog(getActivity(), l,
-				c.get(Calendar.HOUR_OF_DAY), c.get(Calendar.MINUTE), true);
+		return new TimePickerDialog(getActivity(), l, hr, min, true);
 	}
 }

@@ -9,26 +9,30 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-        <AutoCompleteTextView
+        <TextView
             android:id="@+id/placeNameText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:ems="10"
             android:hint="Place name"
+            android:inputType="textCapSentences"
             android:singleLine="true" >
 
             <requestFocus />
-        </AutoCompleteTextView>
 
-        <Button
-            android:id="@+id/savePlace"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="savePlace"
-            android:text="SAVE" >
-        </Button>
+            <AutoCompleteTextView>
+            </AutoCompleteTextView>
+
+            <Button
+                android:id="@+id/savePlace"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="savePlace"
+                android:text="SAVE" >
+            </Button>
+        </TextView>
     </LinearLayout>
 
     <LinearLayout
@@ -59,7 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="saveTime"
-        android:text="Save Time" />
+        android:text="Add Time" />
 
     <ListView
         android:id="@+id/dayTimes"

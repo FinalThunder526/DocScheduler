@@ -6,6 +6,7 @@
 
 package com.sarangj.docschedulerdoc;
 
+import java.util.Calendar;
 import java.util.List;
 
 import android.app.TimePickerDialog.OnTimeSetListener;
@@ -19,6 +20,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.*;
+import android.widget.AdapterView.OnItemClickListener;
 
 public class EditPlaceActivity extends FragmentActivity {
 	// private List<DayTime> dayTimes;
@@ -64,6 +66,7 @@ public class EditPlaceActivity extends FragmentActivity {
 			code = EditScheduleActivity.EDIT_CODE;
 			place = HomeActivity.getSchedule().getPlace(
 					intent.getIntExtra(EditScheduleActivity.PLACE_INDEX, -1));
+			placeName.setText(place.getName());
 		} else {
 			// add mode
 			code = EditScheduleActivity.ADD_CODE;
@@ -80,28 +83,21 @@ public class EditPlaceActivity extends FragmentActivity {
 		// dayTimes = new ArrayList<DayTime>();
 		dayTimesAdapter = new DayTimeAdapter(this, place.getDayTimes());
 		dayTimesList.setAdapter(dayTimesAdapter);
+		dayTimesList.setOnItemClickListener(new OnItemClickListener() {
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				delete(position);
+			}
 
+		});
 	}
 
 	/**
-	 * Saves the given time slot for this place.
+	 * Deletes the DayTime object at the given position.
 	 */
-	public void saveTime(View v) {
-		if (sChanged && eChanged) {
-			try {
-				place.addDayTime(new DayTime(day.getSelectedItem().toString(),
-						sH, sM, eH, eM));
-				dayTimesAdapter.notifyDataSetChanged();
-				Toast.makeText(this, "Day-time pair added", Toast.LENGTH_LONG)
-						.show();
-			} catch (Exception e) {
-				Toast.makeText(this, "Error, try again.", Toast.LENGTH_LONG)
-						.show();
-			}
-		} else {
-			Toast.makeText(this, "Please check start and end times.",
-					Toast.LENGTH_LONG).show();
-		}
+	private void delete(int position) {
+		place.getDayTimes().remove(position);
+		dayTimesAdapter.notifyDataSetChanged();
 	}
 
 	/**
@@ -111,6 +107,23 @@ public class EditPlaceActivity extends FragmentActivity {
 	 *            whether this is the start time picker or not
 	 */
 	public void setTime(final boolean isStart) {
+		final int h, m;
+
+		final Calendar c = Calendar.getInstance();
+		if (sChanged && eChanged) {
+			h = (isStart) ? sH : eH;
+			m = (isStart) ? sM : eM;
+		} else if (!sChanged && !eChanged) {
+			h = c.get(Calendar.HOUR_OF_DAY);
+			m = c.get(Calendar.MINUTE);
+		} else if (sChanged && !eChanged) {
+			h = sH;
+			m = sM;
+		} else {
+			h = eH;
+			m = eM;
+		}
+
 		DialogFragment newFragment = new TimePickerFragment(
 				new OnTimeSetListener() {
 					@Override
@@ -127,9 +140,30 @@ public class EditPlaceActivity extends FragmentActivity {
 						(isStart ? startTime : endTime).setText(DayTime
 								.getTimeAsString(h, m));
 					}
-				});
+				}, h, m);
 		newFragment.show(getSupportFragmentManager(), (isStart) ? "stimepicker"
 				: "etimepicker");
+	}
+
+	/**
+	 * Saves the given time slot for this place.
+	 */
+	public void saveTime(View v) {
+		if (sChanged && eChanged) {
+			try {
+				place.addDayTime(new DayTime(day.getSelectedItem().toString(),
+						sH, sM, eH, eM));
+				dayTimesAdapter.notifyDataSetChanged();
+				Toast.makeText(this, "Day-time pair added", Toast.LENGTH_SHORT)
+						.show();
+			} catch (Exception e) {
+				Toast.makeText(this, "Error, try again.", Toast.LENGTH_SHORT)
+						.show();
+			}
+		} else {
+			Toast.makeText(this, "Please check start and end times.",
+					Toast.LENGTH_LONG).show();
+		}
 	}
 
 	/**
@@ -191,5 +225,9 @@ public class EditPlaceActivity extends FragmentActivity {
 			setResult(RESULT_OK, intent);
 			finish();
 		}
+	}
+
+	public void onBackPressed() {
+		savePlace(new View(this));
 	}
 }

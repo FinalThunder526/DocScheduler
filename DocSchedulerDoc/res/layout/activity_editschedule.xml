@@ -16,18 +16,18 @@
             android:onClick="addPlace"
             android:text="Add" />
 
-        <Button
-            android:id="@+id/editPlace"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="editPlace"
-            android:text="Edit" />
-
         <CheckBox
             android:id="@+id/isDeleting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Delete" />
+
+        <Button
+            android:id="@+id/saveSchedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="saveSchedule"
+            android:text="Save" />
     </LinearLayout>
 
     <ListView

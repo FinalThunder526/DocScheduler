@@ -13,16 +13,16 @@ import android.content.*;
 import android.os.*;
 import android.view.*;
 import android.widget.*;
+import android.widget.AdapterView.OnItemClickListener;
 
 public class EditScheduleActivity extends Activity {
-	private Button add, edit;
 	private CheckBox delete;
 	private ListView placesList;
 
 	// private List<String> placesAsStrings;
 	private PlaceAdapter placesAdapter;
 
-	private DocSchedule s;
+	private Schedule s;
 
 	public static final int ADD_CODE = 0;
 	public static final int EDIT_CODE = 1;
@@ -37,10 +37,26 @@ public class EditScheduleActivity extends Activity {
 
 		s = HomeActivity.getSchedule();
 
+		delete = (CheckBox) findViewById(R.id.isDeleting);
 		placesList = (ListView) findViewById(R.id.placesList);
 		// placesAsStrings = s.getPlacesAsStrings();
 		placesAdapter = new PlaceAdapter(this, s.getPlaces());
 		placesList.setAdapter(placesAdapter);
+		placesList.setOnItemClickListener(new OnItemClickListener() {
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				if (delete.isChecked()) {
+					deletePlace(position);
+				} else {
+					editPlace(position);
+				}
+			}
+		});
+	}
+
+	private void deletePlace(int pos) {
+		s.getPlaces().remove(pos);
+		placesAdapter.notifyDataSetChanged();
 	}
 
 	public void addPlace(View v) {
@@ -48,12 +64,19 @@ public class EditScheduleActivity extends Activity {
 		startActivityForResult(intent, ADD_CODE);
 	}
 
-	public void editPlace(View v) {
+	public void editPlace(int pos) {
+		Intent intent = new Intent(EditScheduleActivity.this,
+				EditPlaceActivity.class);
+		intent.putExtra(PLACE_INDEX, pos);
+		startActivityForResult(intent, EDIT_CODE);
+	}
 
+	public void saveSchedule(View v) {
+		setResult(RESULT_OK);
+		finish();
 	}
 
 	private class PlaceAdapter extends ArrayAdapter<Place> {
-
 		final Context mContext;
 
 		public PlaceAdapter(Context context, List<Place> objects) {
@@ -78,10 +101,11 @@ public class EditScheduleActivity extends Activity {
 		if (resultCode == Activity.RESULT_OK) {
 			if (requestCode == ADD_CODE) {
 				// New place has been added!
-				placesAdapter.notifyDataSetChanged();
+				// placesAdapter.notifyDataSetChanged();
 			} else if (requestCode == EDIT_CODE) {
-
+				// placesAdapter.notifyDataSetChanged();
 			}
+			placesAdapter.notifyDataSetChanged();
 		}
 	}
 }

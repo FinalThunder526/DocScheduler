@@ -74,6 +74,7 @@ public class Place {
 	}
 
 	public String toString() {
-		return mName + ", " + mDayTimes.size() + " times a week";
+		return mName + ", " + mDayTimes.size() + " time"
+				+ (mDayTimes.size() == 1 ? "" : "s") + " a week";
 	}
 }

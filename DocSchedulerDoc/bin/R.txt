@@ -373,7 +373,6 @@ int id detailsTitle 0x7f0b005e
 int id dialog 0x7f0b0016
 int id disableHome 0x7f0b000b
 int id dropdown 0x7f0b0017
-int id editPlace 0x7f0b0046
 int id editSchedBtn 0x7f0b004a
 int id edit_query 0x7f0b0032
 int id end 0x7f0b0019
@@ -388,7 +387,7 @@ int id homeAsUp 0x7f0b000c
 int id icon 0x7f0b002c
 int id ifRoom 0x7f0b0013
 int id image 0x7f0b0029
-int id isDeleting 0x7f0b0047
+int id isDeleting 0x7f0b0046
 int id isEmailValidBar 0x7f0b0059
 int id large 0x7f0b0006
 int id listMode 0x7f0b0009
@@ -417,6 +416,7 @@ int id publicInfo 0x7f0b0062
 int id radio 0x7f0b0031
 int id saveDayTime 0x7f0b0043
 int id savePlace 0x7f0b003f
+int id saveSchedule 0x7f0b0047
 int id scrollView1 0x7f0b0057
 int id search_badge 0x7f0b0034
 int id search_bar 0x7f0b0033
@@ -512,7 +512,7 @@ int string abc_searchview_description_submit 0x7f070021
 int string abc_searchview_description_voice 0x7f070022
 int string abc_shareactionprovider_share_with 0x7f070026
 int string abc_shareactionprovider_share_with_application 0x7f070025
-int string action_settings 0x7f070029
+int string action_settings 0x7f07002c
 int string app_name 0x7f070027
 int string com_facebook_choose_friends 0x7f07000f
 int string com_facebook_dialogloginactivity_ok_button 0x7f070000
@@ -540,12 +540,15 @@ int string com_facebook_tooltip_default 0x7f070019
 int string com_facebook_usersettingsfragment_log_in_button 0x7f070008
 int string com_facebook_usersettingsfragment_logged_in 0x7f070009
 int string com_facebook_usersettingsfragment_not_logged_in 0x7f07000a
-int string facebook_app_id 0x7f07002a
-int string facebook_login 0x7f07002b
-int string hello_world 0x7f070028
-int string login_name_default 0x7f07002c
-int string public_info 0x7f07002e
-int string signup_pass_hint 0x7f07002d
+int string edit_place_name 0x7f07002a
+int string edit_sched_name 0x7f070029
+int string facebook_app_id 0x7f07002d
+int string facebook_login 0x7f07002e
+int string hello_world 0x7f07002b
+int string home_name 0x7f070028
+int string login_name_default 0x7f07002f
+int string public_info 0x7f070031
+int string signup_pass_hint 0x7f070030
 int style AppBaseTheme 0x7f08008e
 int style AppTheme 0x7f08008f
 int style TextAppearance_AppCompat_Base_CompactMenu_Dialog 0x7f080066

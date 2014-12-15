@@ -10,4 +10,14 @@
     <string name="signup_pass_hint">Password (6+ characters)</string>
     <string name="public_info">I recognize that all the information herein (other than the password) is public information.</string>
 
+    <string-array name="days">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+
 </resources>

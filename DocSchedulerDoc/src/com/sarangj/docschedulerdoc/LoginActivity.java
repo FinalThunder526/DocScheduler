@@ -7,6 +7,7 @@ import com.amazonaws.regions.Regions;
 import com.facebook.Session;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
+import com.parse.ParseFacebookUtils;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
@@ -17,6 +18,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.InputMethodManager;
@@ -32,9 +34,8 @@ public class LoginActivity extends FragmentActivity {
 
 	ProgressDialog mDialog;
 
-	Button signupBtn, loginBtn, logoutBtn;
+	Button signupBtn, loginBtn, fbLoginBtn;
 	EditText emailText, passText;
-	Button switchScreens;
 
 	/*
 	 * CognitoCachingCredentialsProvider mProvider = new
@@ -68,8 +69,8 @@ public class LoginActivity extends FragmentActivity {
 							.toString());
 				}
 			});
-			switchScreens = (Button) findViewById(R.id.switchToSignupBtn);
-			switchScreens.setOnClickListener(new OnClickListener() {
+			signupBtn = (Button) findViewById(R.id.signupBtn);
+			signupBtn.setOnClickListener(new OnClickListener() {
 				public void onClick(View v) {
 					// Go to Create Profile Screen
 					Intent intent = new Intent(LoginActivity.this,
@@ -81,7 +82,34 @@ public class LoginActivity extends FragmentActivity {
 					startActivity(intent);
 				}
 			});
+			fbLoginBtn = (Button) findViewById(R.id.fbLoginBtn);
+			fbLoginBtn.setOnClickListener(new OnClickListener() {
+				public void onClick(View v) {
+					loginWithFb();
+				}
+			});
 		}
+	}
+
+	/**
+	 * Login sequence for Facebook login.
+	 */
+	private void loginWithFb() {
+		ParseFacebookUtils.logIn(this, new LogInCallback() {
+			public void done(ParseUser user, ParseException e) {
+				String s = "";
+				if (e != null)
+					s = e.getMessage();
+				else if (user.isNew()) {
+					// Signup
+					s = "Signup";
+				} else {
+					s = "Login";
+				}
+				Toast.makeText(LoginActivity.this, s, Toast.LENGTH_SHORT)
+						.show();
+			}
+		});
 	}
 
 	public void onResume() {
@@ -96,7 +124,8 @@ public class LoginActivity extends FragmentActivity {
 	}
 
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
-
+		super.onActivityResult(requestCode, resultCode, data);
+		ParseFacebookUtils.finishAuthentication(requestCode, resultCode, data);
 	}
 
 	/**

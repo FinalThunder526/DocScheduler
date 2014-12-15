@@ -11,9 +11,25 @@
         android:text="Error, not logged in" />
 
     <Button
+        android:id="@+id/editSchedBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="editSched"
+        android:text="Edit Schedule" />
+
+    <Button
         android:id="@+id/logoutBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="logout"
         android:text="Logout" />
+
+    <Button
+        android:id="@+id/testButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="savePlaces"
+        android:text="Button"
+        android:visibility="gone" />
 
 </LinearLayout>

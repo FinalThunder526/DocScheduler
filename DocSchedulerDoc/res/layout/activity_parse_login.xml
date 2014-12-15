@@ -43,10 +43,18 @@
             android:text="Login" />
 
         <Button
-            android:id="@+id/switchToSignupBtn"
+            android:id="@+id/signupBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Signup" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/fbLoginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login with Facebook"
+        android:visibility="gone" >
+    </Button>
 
 </LinearLayout>

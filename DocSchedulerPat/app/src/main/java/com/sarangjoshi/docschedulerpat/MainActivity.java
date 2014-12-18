@@ -8,6 +8,11 @@ import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.parse.FindCallback;
+import com.parse.ParseException;
+import com.parse.ParseQuery;
+import com.parse.ParseUser;
+
 import java.util.*;
 
 
@@ -35,6 +40,17 @@ public class MainActivity extends Activity {
     private void loadDoctors() {
         d = ProgressDialog.show(this, "", "Loading...");
 
+        ParseQuery<ParseUser> query = ParseUser.getQuery();
+        query.findInBackground(new FindCallback<ParseUser>() {
+            @Override
+            public void done(List<ParseUser> parseUsers, ParseException e) {
+                for(ParseUser u : parseUsers) {
+                    doctors.add(u.getString("name"));
+                }
+                adapter.notifyDataSetChanged();
+                d.dismiss();
+            }
+        });
     }
 
 

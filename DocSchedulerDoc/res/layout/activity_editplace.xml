@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-        <TextView
+        <EditText
             android:id="@+id/placeNameText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -20,19 +20,16 @@
             android:singleLine="true" >
 
             <requestFocus />
+        </EditText>
 
-            <AutoCompleteTextView>
-            </AutoCompleteTextView>
-
-            <Button
-                android:id="@+id/savePlace"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="savePlace"
-                android:text="SAVE" >
-            </Button>
-        </TextView>
+        <Button
+            android:id="@+id/savePlace"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="savePlace"
+            android:text="SAVE" >
+        </Button>
     </LinearLayout>
 
     <LinearLayout

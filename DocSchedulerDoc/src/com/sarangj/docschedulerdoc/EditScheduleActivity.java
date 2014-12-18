@@ -8,6 +8,8 @@ package com.sarangj.docschedulerdoc;
 
 import java.util.List;
 
+import com.parse.*;
+
 import android.app.*;
 import android.content.*;
 import android.os.*;
@@ -52,6 +54,59 @@ public class EditScheduleActivity extends Activity {
 				}
 			}
 		});
+
+		// Retrieving schedule
+		retrieveSchedule();
+	}
+
+	private void retrieveSchedule() {
+		d = ProgressDialog.show(this, "", "Loading...");
+		ParseUser user = ParseUser.getCurrentUser();
+		ParseObject o = user.getParseObject("schedule");
+		if (o != null)
+			o.fetchInBackground(new GetCallback<ParseObject>() {
+				public void done(ParseObject sched, ParseException e) {
+					if (e == null)
+						setupSchedule(sched);
+				}
+			});
+		else {
+			d.dismiss();
+		}
+	}
+
+	ProgressDialog d;
+
+	/**
+	 * Once the Schedule ParseObject has been retrieved, actually initialize the
+	 * schedule into the Schedule Java object.
+	 * 
+	 * @param sched
+	 */
+	protected void setupSchedule(ParseObject sched) {
+		initSchedule(sched);
+	}
+
+	private void initSchedule(ParseObject sched) {
+		s.resetPlaces();
+		// Get places
+		ParseRelation<ParseObject> placeRelation = sched
+				.getRelation(Schedule.PLACES_KEY);
+		placeRelation.getQuery().findInBackground(
+				new FindCallback<ParseObject>() {
+					public void done(List<ParseObject> places, ParseException e) {
+						if (e == null) {
+							for (ParseObject place : places) {
+								Place p = new Place();
+								p.construct(place);
+								// savePlaceId(place.getObjectId());
+								s.getPlaces().add(p);
+								placesAdapter.notifyDataSetChanged();
+								d.dismiss();
+							}
+						}
+					}
+				});
 	}
 
 	private void deletePlace(int pos) {

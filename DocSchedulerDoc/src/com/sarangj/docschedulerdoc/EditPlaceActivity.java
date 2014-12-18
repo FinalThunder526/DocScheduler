@@ -24,6 +24,7 @@ import android.widget.AdapterView.OnItemClickListener;
 
 public class EditPlaceActivity extends FragmentActivity {
 	// private List<DayTime> dayTimes;
+	private Place oldPlace;
 	private Place place;
 
 	private Spinner day;
@@ -213,6 +214,7 @@ public class EditPlaceActivity extends FragmentActivity {
 			Toast.makeText(this, "Please add times.", Toast.LENGTH_SHORT)
 					.show();
 		} else {
+			Toast.makeText(this, "Place saved!", Toast.LENGTH_SHORT).show();
 			Intent intent = getIntent();
 
 			place.setName(placeName.getText().toString());

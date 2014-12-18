@@ -8,38 +8,197 @@ package com.sarangj.docschedulerdoc;
 
 import java.util.*;
 
-import com.parse.ParseUser;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.widget.Toast;
+
+import com.parse.*;
 
 public class Schedule {
-	public static final String PLACENAME_KEY = "placeName";
+	public static final String PLACES_KEY = "places";
+	public static final String SCHEDULE_OBJECT_KEY = "Schedule";
 
-	private List<Place> places;
+	private List<Place> mPlaces;
+	private final Context mContext;
 
-	public Schedule() {
-		places = new ArrayList<Place>();
-	}
+	private ParseObject scheduleObject;
 
-	public int addPlace(Place place) {
-		places.add(place);
-		return places.size() - 1;
-	}
-
-	public Place getPlace(int i) {
-		return places.get(i);
-	}
-
-	public List<Place> getPlaces() {
-		return places;
+	/**
+	 * Initializes a new Schedule object.
+	 * 
+	 * @param context
+	 */
+	public Schedule(Context context) {
+		mPlaces = new ArrayList<Place>();
+		mContext = context;
 	}
 
 	/**
-	 * Saves this schedule object to the given user.
+	 * Adds a new Place to this schedule.
+	 * 
+	 * @param place
+	 *            new Place
+	 * @return index of added Place
+	 */
+	public int addPlace(Place place) {
+		mPlaces.add(place);
+		return mPlaces.size() - 1;
+	}
+
+	public Place getPlace(int i) {
+		return mPlaces.get(i);
+	}
+
+	public List<Place> getPlaces() {
+		return mPlaces;
+	}
+
+	/**
+	 * Saves this schedule object to the given user.<br>
+	 * Step 1: Create Place ParseObjects. Save.<br>
+	 * Step 2: Create Schedule ParseObject, tie places in as ParseRelations.
+	 * Save. <br>
+	 * Step 3: Put Schedule into User. Save.
+	 * 
 	 * 
 	 * @param user
 	 *            an existent Parse User, signed in.
 	 * @return success
 	 */
-	public boolean saveToParse(ParseUser user) {
+	public boolean saveToParse() {
+		savePlaces();
 		return false;
+	}
+
+	/**
+	 * 
+	 */
+	private void savePlaces() {
+		// Creates a list of newly created Place ParseObjects
+		final List<ParseObject> parsePlaces = new ArrayList<ParseObject>();
+		for (Place p : mPlaces) {
+			parsePlaces.add(p.getParseObject());
+		}
+		// Saves new ParseObjects to the server
+		for (int i = 0; i < parsePlaces.size() - 1; i++) {
+			ParseObject p = parsePlaces.get(i);
+			p.saveInBackground();
+		}
+		parsePlaces.get(parsePlaces.size() - 1).saveInBackground(
+				new SaveCallback() {
+					public void done(ParseException e) {
+						saveSchedule(parsePlaces);
+					}
+				});
+	}
+
+	private void saveSchedule(final List<ParseObject> parsePlaces) {
+		// Check for existing schedule
+		ParseObject x = ParseUser.getCurrentUser().getParseObject(
+				HomeActivity.SCHEDULE_KEY);
+		boolean isEdit = x != null;
+		if (isEdit)
+			scheduleObject = x;
+		else
+			scheduleObject = new ParseObject(SCHEDULE_OBJECT_KEY);
+
+		final ParseRelation<ParseObject> placeRelation = scheduleObject
+				.getRelation(PLACES_KEY);
+
+		if (isEdit) {
+			// Retrieve list of PlaceObjects
+			placeRelation.getQuery().findInBackground(
+					new FindCallback<ParseObject>() {
+						public void done(List<ParseObject> currentPlaces,
+								ParseException e) {
+							if (e == null) {
+								// Delete each object
+								for (int i = 0; i < currentPlaces.size() - 1; i++) {
+									currentPlaces.get(i).deleteInBackground();
+								}
+								currentPlaces.get(currentPlaces.size() - 1)
+										.deleteInBackground(
+												new DeleteCallback() {
+													public void done(
+															ParseException e) {
+														if (e == null)
+															addNewPlaces(
+																	parsePlaces,
+																	placeRelation);
+													}
+												});
+							}
+						}
+					});
+		} else {
+			addNewPlaces(parsePlaces, placeRelation);
+		}
+		/*
+		 * // Get current place object titles Set<String> placeIds =
+		 * getCurrentPlaceIds(); // Deletes all current places for (String id :
+		 * placeIds) { deleteObject(placeRelation, id); }
+		 */
+	}
+
+	private void addNewPlaces(List<ParseObject> parsePlaces,
+			ParseRelation<ParseObject> placeRelation) {
+		// Adds new places
+		for (ParseObject o : parsePlaces) {
+			placeRelation.add(o);
+		}
+		// Saves schedule
+		scheduleObject.saveInBackground(new SaveCallback() {
+			public void done(ParseException e) {
+				saveUser();
+			}
+		});
+	}
+
+	/**
+	 * Given an Place object id, deletes the object.
+	 * 
+	 * @param id
+	 *            a Place object id
+	 */
+	private void deleteObject(final ParseRelation<ParseObject> rel, String id) {
+		ParseQuery<ParseObject> object = ParseQuery
+				.getQuery(Place.PLACE_OBJECT_KEY);
+		object.getInBackground(id, new GetCallback<ParseObject>() {
+			public void done(ParseObject obj, ParseException e) {
+				if (e == null) {
+					obj.deleteInBackground();
+					rel.remove(obj);
+				}
+			}
+		});
+	}
+
+	/*
+	 * private Set<String> getCurrentPlaceIds() { SharedPreferences pref =
+	 * mContext.getSharedPreferences("places", Context.MODE_PRIVATE); return
+	 * pref.getStringSet(ParseUser.getCurrentUser().getObjectId(), new
+	 * TreeSet<String>()); }
+	 */
+
+	private void saveUser() {
+		ParseUser user = ParseUser.getCurrentUser();
+		user.put("schedule", scheduleObject);
+		user.saveInBackground(new SaveCallback() {
+			public void done(ParseException e) {
+				if (e == null) {
+					HomeActivity.d.dismiss();
+					Toast.makeText(mContext, "Schedule saved.",
+							Toast.LENGTH_LONG).show();
+				}
+			}
+		});
+	}
+
+	private void savePlaceId(String objectId) {
+
+	}
+
+	public void resetPlaces() {
+		mPlaces.clear();
 	}
 }

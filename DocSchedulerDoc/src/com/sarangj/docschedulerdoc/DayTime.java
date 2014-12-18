@@ -26,8 +26,12 @@ public class DayTime {
 		setEndMin(eM);
 	}
 
-	public DayTime(int day, String start, String end) {
-
+	public DayTime(String day, String start, String end) {
+		setDay(day);
+		setStartHour(Integer.parseInt(start.substring(0, 2)));
+		setStartMin(Integer.parseInt(start.substring(3)));
+		setEndHour(Integer.parseInt(end.substring(0, 2)));
+		setEndMin(Integer.parseInt(end.substring(3)));
 	}
 
 	public int getStartHour() {

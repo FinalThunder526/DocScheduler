@@ -8,13 +8,10 @@ package com.sarangj.docschedulerdoc;
 
 import java.util.Arrays;
 
-import com.parse.ParseException;
-import com.parse.ParseObject;
-import com.parse.ParseRelation;
-import com.parse.ParseUser;
-import com.parse.SaveCallback;
+import com.parse.*;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -22,6 +19,8 @@ import android.view.View.OnClickListener;
 import android.widget.*;
 
 public class HomeActivity extends Activity {
+	public static final String SCHEDULE_KEY = "schedule";
+
 	ParseUser mUser;
 
 	private static Schedule mSchedule;
@@ -37,7 +36,7 @@ public class HomeActivity extends Activity {
 		super.onCreate(savedInstanceState);
 
 		mUser = ParseUser.getCurrentUser();
-		mSchedule = new Schedule();
+		mSchedule = new Schedule(this);
 
 		if (mUser == null || mUser.getSessionToken() == null) {
 			Intent intent = new Intent(this, LoginActivity.class);
@@ -73,14 +72,14 @@ public class HomeActivity extends Activity {
 	public void savePlaces(View v) {
 		final ParseObject place1 = new ParseObject("Place"), place2 = new ParseObject(
 				"Place");
-		place1.put(Schedule.PLACENAME_KEY, "Medicare");
+		place1.put(Place.PLACENAME_KEY, "Medicare");
 		place1.addAll("days", Arrays.asList(0, 1, 2, 3, 4));
 		place1.addAll("starts",
 				Arrays.asList("04:00", "04:00", "04:00", "04:00", "04:00"));
 		place1.addAll("ends",
 				Arrays.asList("05:00", "05:00", "05:00", "05:00", "05:00"));
 		place1.saveInBackground();
-		place2.put(Schedule.PLACENAME_KEY, "Private");
+		place2.put(Place.PLACENAME_KEY, "Private");
 		place2.addAll("days", Arrays.asList(0, 1));
 		place2.addAll("starts", Arrays.asList("05:30", "06:30"));
 		place2.addAll("ends", Arrays.asList("06:30", "07:30"));
@@ -130,9 +129,12 @@ public class HomeActivity extends Activity {
 		Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
 	}
 
+	public static ProgressDialog d;
+	
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (resultCode == RESULT_OK) {
-			mSchedule.saveToParse(mUser);
+			d = ProgressDialog.show(this, "", "Saving...");
+			mSchedule.saveToParse();
 		}
 	}
 }

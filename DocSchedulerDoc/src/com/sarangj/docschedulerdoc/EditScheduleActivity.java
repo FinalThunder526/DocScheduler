@@ -59,6 +59,9 @@ public class EditScheduleActivity extends Activity {
 		retrieveSchedule();
 	}
 
+	/**
+	 * Retrieves the current schedule from the Parse database.
+	 */
 	private void retrieveSchedule() {
 		d = ProgressDialog.show(this, "", "Loading...");
 		ParseUser user = ParseUser.getCurrentUser();
@@ -67,7 +70,7 @@ public class EditScheduleActivity extends Activity {
 			o.fetchInBackground(new GetCallback<ParseObject>() {
 				public void done(ParseObject sched, ParseException e) {
 					if (e == null)
-						setupSchedule(sched);
+						initSchedule(sched);
 				}
 			});
 		else {
@@ -83,10 +86,6 @@ public class EditScheduleActivity extends Activity {
 	 * 
 	 * @param sched
 	 */
-	protected void setupSchedule(ParseObject sched) {
-		initSchedule(sched);
-	}
-
 	private void initSchedule(ParseObject sched) {
 		s.resetPlaces();
 		// Get places

@@ -61,63 +61,12 @@ public class HomeActivity extends Activity {
 		ParseUser currentUser = ParseUser.getCurrentUser();
 
 		if (currentUser == null || currentUser.getSessionToken() == null) {
-			// Successfully logged out, bitchezzz!!!!!\
+			// Successfully logged out
 			toast("Logged out!");
 			Intent intent = new Intent(this, LoginActivity.class);
 			startActivity(intent);
 			finish();
 		}
-	}
-
-	public void savePlaces(View v) {
-		final ParseObject place1 = new ParseObject("Place"), place2 = new ParseObject(
-				"Place");
-		place1.put(Place.PLACENAME_KEY, "Medicare");
-		place1.addAll("days", Arrays.asList(0, 1, 2, 3, 4));
-		place1.addAll("starts",
-				Arrays.asList("04:00", "04:00", "04:00", "04:00", "04:00"));
-		place1.addAll("ends",
-				Arrays.asList("05:00", "05:00", "05:00", "05:00", "05:00"));
-		place1.saveInBackground();
-		place2.put(Place.PLACENAME_KEY, "Private");
-		place2.addAll("days", Arrays.asList(0, 1));
-		place2.addAll("starts", Arrays.asList("05:30", "06:30"));
-		place2.addAll("ends", Arrays.asList("06:30", "07:30"));
-		place2.saveInBackground(new SaveCallback() {
-			public void done(ParseException e) {
-				if (e == null)
-					saveSchedule(place1, place2);
-			}
-		});
-	}
-
-	private void saveSchedule(ParseObject... places) {
-		final ParseObject mySchedule = new ParseObject("Schedule");
-		ParseRelation<ParseObject> myRelation = mySchedule
-				.getRelation("places");
-
-		for (ParseObject place : places) {
-			myRelation.add(place);
-		}
-		mySchedule.saveInBackground(new SaveCallback() {
-			public void done(ParseException e) {
-				if (e == null)
-					saveUser(mySchedule);
-			}
-		});
-	}
-
-	private void saveUser(ParseObject mySchedule) {
-		mUser.put("schedule", mySchedule);
-
-		mUser.saveInBackground(new SaveCallback() {
-			public void done(ParseException e) {
-				if (e == null)
-					toast("Saved");
-				else
-					toast(e.getMessage());
-			}
-		});
 	}
 
 	public void editSched(View v) {

@@ -71,7 +71,7 @@ public class Schedule {
 	}
 
 	/**
-	 * 
+	 * Saves the newly created Places to the server.
 	 */
 	private void savePlaces() {
 		// Creates a list of newly created Place ParseObjects
@@ -79,19 +79,31 @@ public class Schedule {
 		for (Place p : mPlaces) {
 			parsePlaces.add(p.getParseObject());
 		}
-		// Saves new ParseObjects to the server
-		for (int i = 0; i < parsePlaces.size() - 1; i++) {
-			ParseObject p = parsePlaces.get(i);
-			p.saveInBackground();
+		if (parsePlaces.size() > 0) {
+			// Saves new ParseObjects to the server
+			for (int i = 0; i < parsePlaces.size() - 1; i++) {
+				ParseObject p = parsePlaces.get(i);
+				p.saveInBackground();
+			}
+
+			parsePlaces.get(parsePlaces.size() - 1).saveInBackground(
+					new SaveCallback() {
+						public void done(ParseException e) {
+							saveSchedule(parsePlaces);
+						}
+					});
+		} else {
+			saveSchedule(parsePlaces);
 		}
-		parsePlaces.get(parsePlaces.size() - 1).saveInBackground(
-				new SaveCallback() {
-					public void done(ParseException e) {
-						saveSchedule(parsePlaces);
-					}
-				});
 	}
 
+	/**
+	 * Now that the new Place objects have been saved to the server, deletes the
+	 * old Place objects.
+	 * 
+	 * @param parsePlaces
+	 *            the new Place objects
+	 */
 	private void saveSchedule(final List<ParseObject> parsePlaces) {
 		// Check for existing schedule
 		ParseObject x = ParseUser.getCurrentUser().getParseObject(
@@ -140,6 +152,15 @@ public class Schedule {
 		 */
 	}
 
+	/**
+	 * Now that the old Places have been deleted from the server, adds the new
+	 * ones to the ParseRelation.
+	 * 
+	 * @param parsePlaces
+	 *            the new places
+	 * @param placeRelation
+	 *            the ParseRelation
+	 */
 	private void addNewPlaces(List<ParseObject> parsePlaces,
 			ParseRelation<ParseObject> placeRelation) {
 		// Adds new places
@@ -155,31 +176,9 @@ public class Schedule {
 	}
 
 	/**
-	 * Given an Place object id, deletes the object.
-	 * 
-	 * @param id
-	 *            a Place object id
+	 * After the Schedule's ParseRelation has the Place objects added, saves the
+	 * Schedule object to the current User.
 	 */
-	private void deleteObject(final ParseRelation<ParseObject> rel, String id) {
-		ParseQuery<ParseObject> object = ParseQuery
-				.getQuery(Place.PLACE_OBJECT_KEY);
-		object.getInBackground(id, new GetCallback<ParseObject>() {
-			public void done(ParseObject obj, ParseException e) {
-				if (e == null) {
-					obj.deleteInBackground();
-					rel.remove(obj);
-				}
-			}
-		});
-	}
-
-	/*
-	 * private Set<String> getCurrentPlaceIds() { SharedPreferences pref =
-	 * mContext.getSharedPreferences("places", Context.MODE_PRIVATE); return
-	 * pref.getStringSet(ParseUser.getCurrentUser().getObjectId(), new
-	 * TreeSet<String>()); }
-	 */
-
 	private void saveUser() {
 		ParseUser user = ParseUser.getCurrentUser();
 		user.put("schedule", scheduleObject);

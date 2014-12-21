@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.sarangj.docschedulerdoc"
+    package="com.sarangjoshi.docschedulerdoc"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -22,11 +22,11 @@
             android:label="@string/facebook_login" >
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name="com.sarangjoshi.docschedulerdoc.LoginActivity"
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name=".HomeActivity"
+            android:name="com.sarangjoshi.docschedulerdoc.HomeActivity"
             android:label="@string/home_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,29 +35,29 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SignupActivity"
+            android:name="com.sarangjoshi.docschedulerdoc.SignupActivity"
             android:label="@string/app_name"
-            android:parentActivityName=".LoginActivity" >
+            android:parentActivityName="com.sarangjoshi.docschedulerdoc.LoginActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.sarangj.docschedulerdoc.LoginActivity" />
+                android:value="com.sarangjoshi.docschedulerdoc.LoginActivity" />
         </activity>
         <activity
-            android:name=".EditScheduleActivity"
+            android:name="com.sarangjoshi.docschedulerdoc.EditScheduleActivity"
             android:label="@string/edit_sched_name"
-            android:parentActivityName=".HomeActivity" >
+            android:parentActivityName="com.sarangjoshi.docschedulerdoc.HomeActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.sarangj.docschedulerdoc.HomeActivity" >
+                android:value="com.sarangjoshi.docschedulerdoc.HomeActivity" >
             </meta-data>
         </activity>
         <activity
-            android:name=".EditPlaceActivity"
+            android:name="com.sarangjoshi.docschedulerdoc.EditPlaceActivity"
             android:label="@string/edit_place_name"
-            android:parentActivityName=".EditScheduleActivity" >
+            android:parentActivityName="com.sarangjoshi.docschedulerdoc.EditScheduleActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.sarangj.docschedulerdoc.EditScheduleActivity" >
+                android:value="com.sarangjoshi.docschedulerdoc.EditScheduleActivity" >
             </meta-data>
         </activity>
 

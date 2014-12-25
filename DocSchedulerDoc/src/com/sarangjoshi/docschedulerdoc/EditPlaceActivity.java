@@ -154,9 +154,14 @@ public class EditPlaceActivity extends FragmentActivity {
 	public void saveTime(View v) {
 		if (sChanged && eChanged) {
 			try {
-				place.addDayTime(new DayTime(day.getSelectedItem().toString(),
-						sH, sM, eH, eM));
-				dayTimesAdapter.notifyDataSetChanged();
+				if (isValid()) {
+					place.addDayTime(new DayTime(day.getSelectedItem()
+							.toString(), sH, sM, eH, eM));
+					dayTimesAdapter.notifyDataSetChanged();
+				} else {
+					Toast.makeText(this, "Time isn't valid.",
+							Toast.LENGTH_SHORT);
+				}
 			} catch (Exception e) {
 				Toast.makeText(this, "Error, try again.", Toast.LENGTH_SHORT)
 						.show();
@@ -165,6 +170,20 @@ public class EditPlaceActivity extends FragmentActivity {
 			Toast.makeText(this, "Please check start and end times.",
 					Toast.LENGTH_LONG).show();
 		}
+	}
+
+	/**
+	 * Checks if the current time is valid.
+	 */
+	private boolean isValid() {
+		if (getMin(sH, sM) >= getMin(eH, eM)) {
+			return false;
+		}
+		return true;
+	}
+
+	private int getMin(int h, int m) {
+		return 24 * h + m;
 	}
 
 	/**

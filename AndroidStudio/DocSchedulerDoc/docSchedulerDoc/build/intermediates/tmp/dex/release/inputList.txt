@@ -1,0 +1,10 @@
+C:\Users\Sarang\Documents\GitHub\DocScheduler\AndroidStudio\DocSchedulerDoc\docSchedulerDoc\build\intermediates\classes\release
+C:\Users\Sarang\Documents\GitHub\DocScheduler\AndroidStudio\DocSchedulerDoc\docSchedulerDoc\build\intermediates\pre-dexed\release\support-annotations-21.0.2-446046ca9e28f88ce5a1093fa38c54bb64bee341.jar
+C:\Users\Sarang\Documents\GitHub\DocScheduler\AndroidStudio\DocSchedulerDoc\docSchedulerDoc\build\intermediates\pre-dexed\release\bolts-android-1.1.2-45d8836e59993775d361747c1e1dbe5a5f3b8177.jar
+C:\Users\Sarang\Documents\GitHub\DocScheduler\AndroidStudio\DocSchedulerDoc\docSchedulerDoc\build\intermediates\pre-dexed\release\aws-android-sdk-2.1.5-cognito-60fc58ec2cc4e46bc03bb253ad5c1ccff21e26ac.jar
+C:\Users\Sarang\Documents\GitHub\DocScheduler\AndroidStudio\DocSchedulerDoc\docSchedulerDoc\build\intermediates\pre-dexed\release\internal_impl-21.0.2-ac58389c6710f85250db03fa931cdfb6dde740ba.jar
+C:\Users\Sarang\Documents\GitHub\DocScheduler\AndroidStudio\DocSchedulerDoc\docSchedulerDoc\build\intermediates\pre-dexed\release\classes-6094dc852c460658ed845c0661d5169fc2a3b5d5.jar
+C:\Users\Sarang\Documents\GitHub\DocScheduler\AndroidStudio\DocSchedulerDoc\docSchedulerDoc\build\intermediates\pre-dexed\release\classes-db4f732dc92fd6aac52db5d993ff6ce448b43f8a.jar
+C:\Users\Sarang\Documents\GitHub\DocScheduler\AndroidStudio\DocSchedulerDoc\docSchedulerDoc\build\intermediates\pre-dexed\release\Parse-1.7.1-76cacf873314bd6654345f2020aa5bb78ba5581d.jar
+C:\Users\Sarang\Documents\GitHub\DocScheduler\AndroidStudio\DocSchedulerDoc\docSchedulerDoc\build\intermediates\pre-dexed\release\classes-dc08813fd7a5adb0d2db6247f47a9e8933b9f686.jar
+C:\Users\Sarang\Documents\GitHub\DocScheduler\AndroidStudio\DocSchedulerDoc\docSchedulerDoc\build\intermediates\pre-dexed\release\aws-android-sdk-2.1.5-core-e7a45256aa36c7b850aba5625077182606bb6995.jar

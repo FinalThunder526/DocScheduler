@@ -2,9 +2,12 @@ package com.sarangjoshi.docschedulerpat;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -17,9 +20,12 @@ import java.util.*;
 
 
 public class MainActivity extends Activity {
+    public static final String DOC_ID = "doc-id";
+
     private ListView doctorsList;
     private ArrayAdapter<String> adapter;
     private List<String> doctors;
+    private List<String> docObjectIds;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +34,17 @@ public class MainActivity extends Activity {
 
         doctorsList = (ListView) findViewById(R.id.doctorsList);
         doctors = new ArrayList<String>();
+        docObjectIds = new ArrayList<String>();
 
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, doctors);
         doctorsList.setAdapter(adapter);
+        doctorsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(MainActivity.this, DocScheduleActivity.class);
+                intent.putExtra(DOC_ID, docObjectIds.get(position));
+            }
+        });
 
         loadDoctors();
     }
@@ -46,6 +60,7 @@ public class MainActivity extends Activity {
             public void done(List<ParseUser> parseUsers, ParseException e) {
                 for(ParseUser u : parseUsers) {
                     doctors.add(u.getString("name"));
+                    docObjectIds.add(u.getObjectId());
                 }
                 adapter.notifyDataSetChanged();
                 d.dismiss();

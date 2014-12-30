@@ -13,9 +13,9 @@ import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 
 public class TimePickerFragment extends DialogFragment {
-	OnTimeSetListener l;
+    OnTimeSetListener l;
 
-	int hr, min;
+    int hr, min;
 
     public TimePickerFragment() {
 
@@ -33,7 +33,7 @@ public class TimePickerFragment extends DialogFragment {
         this.min = min;
     }
 
-	public Dialog onCreateDialog(Bundle savedInstanceState) {
-		return new TimePickerDialog(getActivity(), l, hr, min, false);
-	}
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
+        return new TimePickerDialog(getActivity(), l, hr, min, false);
+    }
 }

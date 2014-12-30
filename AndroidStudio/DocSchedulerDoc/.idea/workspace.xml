@@ -42,35 +42,28 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
+            <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1258">
               <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimePickerFragment.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TimePickerFragment.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/TimePickerFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="58" max-vertical-offset="629">
-              <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-              <folding>
-                <element signature="e#496#497#0" expanded="true" />
-                <element signature="e#520#521#0" expanded="true" />
-                <element signature="e#553#554#0" expanded="true" />
-                <element signature="e#581#582#0" expanded="true" />
-                <element signature="e#616#617#0" expanded="true" />
-                <element signature="e#646#647#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.608229" vertical-offset="0" max-vertical-offset="559">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EditPlaceActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="EditPlaceActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/EditPlaceActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45796064" vertical-offset="254" max-vertical-offset="884">
-              <caret line="154" column="7" selection-start-line="154" selection-start-column="7" selection-end-line="154" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
+              <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
               <folding>
                 <element signature="method#onCreate#0;class#EditPlaceActivity#0" expanded="false" />
                 <element signature="e#2736#2747#0" expanded="false" />
@@ -1106,8 +1099,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/TimePickerFragment.java" />
         <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/EditPlaceActivity.java" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/TimePickerFragment.java" />
       </list>
     </option>
   </component>
@@ -1128,7 +1121,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="2" />
+    <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -1143,7 +1136,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1164,6 +1156,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1184,7 +1177,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1408,14 +1401,12 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4616695" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1430,6 +1421,8 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1453,22 +1446,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/import-summary.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1547">
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/import-summary.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="920" max-vertical-offset="1547">
-          <caret line="67" column="43" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
@@ -1479,22 +1456,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/TimePickerFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="58" max-vertical-offset="629">
+        <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="765">
           <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-          <folding>
-            <element signature="e#496#497#0" expanded="true" />
-            <element signature="e#520#521#0" expanded="true" />
-            <element signature="e#553#554#0" expanded="true" />
-            <element signature="e#581#582#0" expanded="true" />
-            <element signature="e#616#617#0" expanded="true" />
-            <element signature="e#646#647#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/EditPlaceActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45796064" vertical-offset="254" max-vertical-offset="884">
+        <state vertical-scroll-proportion="0.0" vertical-offset="254" max-vertical-offset="884">
           <caret line="154" column="7" selection-start-line="154" selection-start-column="7" selection-end-line="154" selection-end-column="7" />
           <folding>
             <element signature="method#onCreate#0;class#EditPlaceActivity#0" expanded="false" />
@@ -1514,6 +1484,184 @@
             <element signature="docComment;method#savePlace#0;class#EditPlaceActivity#0" expanded="false" />
             <element signature="method#savePlace#0;class#EditPlaceActivity#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/TimePickerFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="765">
+          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/EditPlaceActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="254" max-vertical-offset="884">
+          <caret line="154" column="7" selection-start-line="154" selection-start-column="7" selection-end-line="154" selection-end-column="7" />
+          <folding>
+            <element signature="method#onCreate#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="e#2736#2747#0" expanded="false" />
+            <element signature="docComment;method#delete#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="method#delete#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="docComment;method#setTime#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="method#setTime#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="docComment;method#saveTime#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="method#saveTime#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="docComment;method#isValid#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="method#isValid#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="docComment;class#DayTimeAdapter#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="class#DayTimeAdapter#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="method#DayTimeAdapter#0;class#DayTimeAdapter#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="method#getView#0;class#DayTimeAdapter#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="docComment;method#savePlace#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="method#savePlace#0;class#EditPlaceActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1258">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/TimePickerFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="765">
+          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/EditPlaceActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="254" max-vertical-offset="884">
+          <caret line="154" column="7" selection-start-line="154" selection-start-column="7" selection-end-line="154" selection-end-column="7" />
+          <folding>
+            <element signature="method#onCreate#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="e#2736#2747#0" expanded="false" />
+            <element signature="docComment;method#delete#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="method#delete#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="docComment;method#setTime#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="method#setTime#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="docComment;method#saveTime#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="method#saveTime#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="docComment;method#isValid#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="method#isValid#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="docComment;class#DayTimeAdapter#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="class#DayTimeAdapter#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="method#DayTimeAdapter#0;class#DayTimeAdapter#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="method#getView#0;class#DayTimeAdapter#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="docComment;method#savePlace#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="method#savePlace#0;class#EditPlaceActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/TimePickerFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="765">
+          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/EditPlaceActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="254" max-vertical-offset="884">
+          <caret line="154" column="7" selection-start-line="154" selection-start-column="7" selection-end-line="154" selection-end-column="7" />
+          <folding>
+            <element signature="method#onCreate#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="e#2736#2747#0" expanded="false" />
+            <element signature="docComment;method#delete#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="method#delete#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="docComment;method#setTime#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="method#setTime#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="docComment;method#saveTime#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="method#saveTime#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="docComment;method#isValid#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="method#isValid#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="docComment;class#DayTimeAdapter#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="class#DayTimeAdapter#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="method#DayTimeAdapter#0;class#DayTimeAdapter#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="method#getView#0;class#DayTimeAdapter#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="docComment;method#savePlace#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="method#savePlace#0;class#EditPlaceActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/import-summary.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1547">
+          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/import-summary.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="920" max-vertical-offset="1547">
+          <caret line="67" column="43" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/EditPlaceActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+          <folding>
+            <element signature="method#onCreate#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="e#2736#2747#0" expanded="false" />
+            <element signature="docComment;method#delete#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="method#delete#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="docComment;method#setTime#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="method#setTime#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="docComment;method#saveTime#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="method#saveTime#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="docComment;method#isValid#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="method#isValid#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="docComment;class#DayTimeAdapter#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="class#DayTimeAdapter#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="method#DayTimeAdapter#0;class#DayTimeAdapter#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="method#getView#0;class#DayTimeAdapter#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="docComment;method#savePlace#0;class#EditPlaceActivity#0" expanded="false" />
+            <element signature="method#savePlace#0;class#EditPlaceActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/TimePickerFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.608229" vertical-offset="0" max-vertical-offset="559">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

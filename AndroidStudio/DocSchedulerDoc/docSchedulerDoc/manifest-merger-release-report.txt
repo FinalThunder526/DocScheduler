@@ -81,7 +81,7 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:34:18
 	android:name
 		ADDED from AndroidManifest.xml:34:28
-activity#com.sarangjoshi.docschedulerdoc.SignupActivity
+activity#com.sarangjoshi.docschedulerdoc.CreateEditProfileActivity
 ADDED from AndroidManifest.xml:37:9
 	android:label
 		ADDED from AndroidManifest.xml:39:13

@@ -2,54 +2,73 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/addPlace"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="addPlace"
-            android:text="Add" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/saveSchedule"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="saveSchedule"
-            android:text="Save" />
-
-        <RadioGroup
-            android:id="@+id/editDeleteRadioGroup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" >
-
-            <RadioButton
-                android:id="@+id/editRadio"
+            <Button
+                android:id="@+id/addPlace"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
-                android:onClick="onRadioButtonClicked"
-                android:text="Edit" />
+                android:onClick="addPlace"
+                android:text="Add New Place" />
 
-            <RadioButton
-                android:id="@+id/deleteRadio"
+            <Button
+                android:id="@+id/saveSchedule"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="onRadioButtonClicked"
-                android:text="Delete" />
-        </RadioGroup>
+                android:onClick="saveSchedule"
+                android:text="Save Schedule" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="16dp"
+                android:text="Mode:"/>
+
+            <RadioGroup
+                android:id="@+id/editDeleteRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/editRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="Edit" />
+
+                <RadioButton
+                    android:id="@+id/deleteRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="Delete" />
+            </RadioGroup>
+        </LinearLayout>
     </LinearLayout>
 
     <ListView
         android:id="@+id/placesList"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-    </ListView>
+        android:layout_height="wrap_content"></ListView>
 
 </LinearLayout>

@@ -17,7 +17,6 @@ import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseFacebookUtils;
 import com.parse.ParseUser;
-import com.sarangjoshi.docschedulerdoc.R;
 
 public class LoginActivity extends FragmentActivity {
 	public static final int LOGGED_OUT = 0;
@@ -68,7 +67,7 @@ public class LoginActivity extends FragmentActivity {
 				public void onClick(View v) {
 					// Go to Create Profile Screen
 					Intent intent = new Intent(LoginActivity.this,
-							SignupActivity.class);
+							CreateEditProfileActivity.class);
 					String email = emailText.getText().toString();
 					String pass = passText.getText().toString();
 					intent.putExtra("email", email);

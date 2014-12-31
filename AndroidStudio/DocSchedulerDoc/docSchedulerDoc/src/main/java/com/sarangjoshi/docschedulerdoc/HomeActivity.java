@@ -6,86 +6,134 @@
 
 package com.sarangjoshi.docschedulerdoc;
 
-import java.util.Arrays;
-
 import com.parse.*;
-import com.sarangjoshi.docschedulerdoc.R;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.*;
 
-public class HomeActivity extends Activity {
-	public static final String SCHEDULE_KEY = "schedule";
+import java.util.ArrayList;
+import java.util.List;
 
-	private static Schedule mSchedule;
+public class HomeActivity extends Activity implements SetPlaceUpdateFragment.PlaceUpdateDialogListener {
+    public static final String SCHEDULE_KEY = "schedule";
 
-	TextView userView;
-	Button logoutBtn, testBtn;
-	public static ProgressDialog d;
+    private static Schedule mSchedule;
 
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
+    TextView userView;
+    Button logoutBtn;
+    ListView todaysPlacesList;
 
-		ParseUser user = ParseUser.getCurrentUser();
-		mSchedule = new Schedule(this);
+    public static ProgressDialog d;
 
-		if (user == null || user.getSessionToken() == null) {
-			Intent intent = new Intent(this, LoginActivity.class);
-			startActivity(intent);
-			finish();
-		} else {
-			setContentView(R.layout.activity_home);
+    int selectedPlace;
+    List<String> todaysPlaces;
+    ArrayAdapter<String> todaysPlacesAdapter;
 
-			userView = (TextView) findViewById(R.id.userText);
-			userView.setText("Logged in as: " + user.getUsername());
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-			logoutBtn = (Button) findViewById(R.id.logoutBtn);
-		}
-	}
+        ParseUser user = ParseUser.getCurrentUser();
+        mSchedule = new Schedule(this);
 
-	public void onBackPressed() {
-		finish();
-	}
+        if (user == null || user.getSessionToken() == null) {
+            // User not logged in
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+        } else {
+            setContentView(R.layout.activity_home);
 
-	/**
-	 * Logs the user out.
-	 */
-	public void logout(View v) {
-		ParseUser.logOut();
-		ParseUser currentUser = ParseUser.getCurrentUser();
+            userView = (TextView) findViewById(R.id.userText);
+            userView.setText("Logged in as: " + user.getUsername());
 
-		if (currentUser == null || currentUser.getSessionToken() == null) {
-			// Successfully logged out
-			Intent intent = new Intent(this, LoginActivity.class);
-			startActivity(intent);
-			finish();
-		}
-	}
+            logoutBtn = (Button) findViewById(R.id.logoutBtn);
 
-	/**
-	 * Starts the schedule edit sequence, starting the EditScheduleActivity.
-	 */
-	public void editSched(View v) {
-		Intent intent = new Intent(this, EditScheduleActivity.class);
-		startActivityForResult(intent, 0);
-	}
+            todaysPlaces = new ArrayList<String>();
+            todaysPlacesAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, todaysPlaces);
+            todaysPlacesList = (ListView) findViewById(R.id.todayList);
+            todaysPlacesList.setAdapter(todaysPlacesAdapter);
+            todaysPlacesList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-	public void onActivityResult(int requestCode, int resultCode, Intent data) {
-		if (resultCode == RESULT_OK) {
-			d = ProgressDialog.show(this, "", "Saving...");
-			mSchedule.saveToParse();
-		}
-	}
+                }
+            });
 
-	/**
-	 * Gets the current Schedule Java object.
-	 */
-	public static Schedule getSchedule() {
-		return mSchedule;
-	}
+            loadToday();
+        }
+    }
+
+    private void loadToday() {
+        ParseUser user = ParseUser.getCurrentUser();
+        ParseObject schedule = user.getParseObject(SCHEDULE_KEY);
+        schedule.fetchInBackground(new GetCallback<ParseObject>() {
+            @Override
+            public void done(ParseObject schedule, ParseException e) {
+
+            }
+        });
+    }
+
+    public void onBackPressed() {
+        finish();
+    }
+
+    /**
+     * Logs the user out.
+     */
+    public void logout(View v) {
+        ParseUser.logOut();
+        ParseUser currentUser = ParseUser.getCurrentUser();
+
+        if (currentUser == null || currentUser.getSessionToken() == null) {
+            // Successfully logged out
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+        }
+    }
+
+    /**
+     * Starts the schedule edit sequence, starting the EditScheduleActivity.
+     */
+    public void editSched(View v) {
+        Intent intent = new Intent(this, EditScheduleActivity.class);
+        startActivityForResult(intent, 0);
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == RESULT_OK) {
+            d = ProgressDialog.show(this, "", "Saving...");
+            mSchedule.saveToParse();
+        }
+    }
+
+    /**
+     * Gets the current Schedule Java object.
+     */
+    public static Schedule getSchedule() {
+        return mSchedule;
+    }
+
+    @Override
+    public void onDialogPositiveClick(SetPlaceUpdateFragment dialog, String newUpdate) {
+        closeKeyboard(dialog);
+        // TODO: Save status with new update
+    }
+
+    @Override
+    public void onDialogNegativeClick(SetPlaceUpdateFragment dialog) {
+        closeKeyboard(dialog);
+    }
+
+    private void closeKeyboard(SetPlaceUpdateFragment v) {
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(v.placeUpdateEdit.getApplicationWindowToken(), 0);
+    }
 }

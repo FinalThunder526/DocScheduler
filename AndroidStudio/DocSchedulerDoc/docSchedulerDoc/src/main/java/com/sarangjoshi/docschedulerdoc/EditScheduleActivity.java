@@ -9,7 +9,6 @@ package com.sarangjoshi.docschedulerdoc;
 import java.util.List;
 
 import com.parse.*;
-import com.sarangjoshi.docschedulerdoc.R;
 
 import android.app.*;
 import android.content.*;
@@ -30,7 +29,7 @@ public class EditScheduleActivity extends Activity {
     // private List<String> placesAsStrings;
     private PlaceAdapter placesAdapter;
 
-    private Schedule s;
+    private Schedule schedule;
 
     public static final int ADD_CODE = 0;
     public static final int EDIT_CODE = 1;
@@ -43,11 +42,11 @@ public class EditScheduleActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editschedule);
 
-        s = HomeActivity.getSchedule();
+        schedule = HomeActivity.getSchedule();
 
         placesList = (ListView) findViewById(R.id.placesList);
-        // placesAsStrings = s.getPlacesAsStrings();
-        placesAdapter = new PlaceAdapter(this, s.getPlaces());
+        // placesAsStrings = schedule.getPlacesAsStrings();
+        placesAdapter = new PlaceAdapter(this, schedule.getPlaces());
         placesList.setAdapter(placesAdapter);
         placesList.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view,
@@ -61,7 +60,8 @@ public class EditScheduleActivity extends Activity {
         });
 
         // Retrieving schedule
-        retrieveSchedule();
+        if(!schedule.isInitialized())
+            retrieveSchedule();
     }
 
     /**
@@ -85,6 +85,34 @@ public class EditScheduleActivity extends Activity {
 
     ProgressDialog d;
 
+    /**
+     * Once the Schedule ParseObject has been retrieved, actually initialize the
+     * schedule into the Schedule Java object.
+     *
+     * @param sched
+     */
+    private void initSchedule(ParseObject sched) {
+        schedule.resetPlaces();
+        // Get places
+        ParseRelation<ParseObject> placeRelation = sched
+                .getRelation(Schedule.PLACES_KEY);
+        placeRelation.getQuery().findInBackground(
+                new FindCallback<ParseObject>() {
+                    public void done(List<ParseObject> places, ParseException e) {
+                        if (e == null) {
+                            for (ParseObject place : places) {
+                                Place p = new Place();
+                                p.construct(place);
+                                // savePlaceId(place.getObjectId());
+                                schedule.getPlaces().add(p);
+                            }
+                            placesAdapter.notifyDataSetChanged();
+                            d.dismiss();
+                        }
+                    }
+                });
+    }
+
     public void onRadioButtonClicked(View v) {
         boolean checked = ((RadioButton) v).isChecked();
         switch (v.getId()) {
@@ -100,40 +128,12 @@ public class EditScheduleActivity extends Activity {
     }
 
     /**
-     * Once the Schedule ParseObject has been retrieved, actually initialize the
-     * schedule into the Schedule Java object.
-     *
-     * @param sched
-     */
-    private void initSchedule(ParseObject sched) {
-        s.resetPlaces();
-        // Get places
-        ParseRelation<ParseObject> placeRelation = sched
-                .getRelation(Schedule.PLACES_KEY);
-        placeRelation.getQuery().findInBackground(
-                new FindCallback<ParseObject>() {
-                    public void done(List<ParseObject> places, ParseException e) {
-                        if (e == null) {
-                            for (ParseObject place : places) {
-                                Place p = new Place();
-                                p.construct(place);
-                                // savePlaceId(place.getObjectId());
-                                s.getPlaces().add(p);
-                            }
-                            placesAdapter.notifyDataSetChanged();
-                            d.dismiss();
-                        }
-                    }
-                });
-    }
-
-    /**
      * Deletes the workplace at the given position.
      *
      * @param pos the position in the list of places.
      */
     private void deletePlace(int pos) {
-        s.getPlaces().remove(pos);
+        schedule.getPlaces().remove(pos);
         placesAdapter.notifyDataSetChanged();
     }
 
@@ -168,7 +168,7 @@ public class EditScheduleActivity extends Activity {
 
             View v = inflater.inflate(R.layout.layout_place, parent, false);
 
-            ((TextView) v.findViewById(R.id.placeText)).setText(s.getPlace(pos)
+            ((TextView) v.findViewById(R.id.placeText)).setText(schedule.getPlace(pos)
                     .toString());
 
             return v;

@@ -23,6 +23,10 @@ public class Schedule {
 
     private ParseObject scheduleObject;
 
+    private boolean mInitialized;
+
+    SaveToParseListener mListener;
+
     /**
      * Initializes a new Schedule object.
      *
@@ -31,6 +35,7 @@ public class Schedule {
     public Schedule(Context context) {
         mPlaces = new ArrayList<Place>();
         mContext = context;
+        mListener = (SaveToParseListener) context;
     }
 
     /**
@@ -59,7 +64,6 @@ public class Schedule {
      * Save. <br>
      * Step 3: Put Schedule into User. Save.
      *
-     * @param user an existent Parse User, signed in.
      * @return success
      */
     public boolean saveToParse() {
@@ -149,7 +153,7 @@ public class Schedule {
             addNewPlaces(parsePlaces, placeRelation);
         }
         /*
-		 * // Get current place object titles Set<String> placeIds =
+         * // Get current place object titles Set<String> placeIds =
 		 * getCurrentPlaceIds(); // Deletes all current places for (String id :
 		 * placeIds) { deleteObject(placeRelation, id); }
 		 */
@@ -186,9 +190,9 @@ public class Schedule {
         user.saveInBackground(new SaveCallback() {
             public void done(ParseException e) {
                 if (e == null) {
-                    HomeActivity.d.dismiss();
                     Toast.makeText(mContext, "Schedule saved.",
                             Toast.LENGTH_LONG).show();
+                    mListener.onSaveCompleted();
                 }
             }
         });
@@ -200,5 +204,17 @@ public class Schedule {
 
     public void resetPlaces() {
         mPlaces.clear();
+    }
+
+    public boolean isInitialized() {
+        return mInitialized;
+    }
+
+    public void setInitialized(boolean init) {
+        mInitialized = init;
+    }
+
+    public interface SaveToParseListener {
+        public void onSaveCompleted();
     }
 }

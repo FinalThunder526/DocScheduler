@@ -91,4 +91,25 @@ public class DayTime {
 		s += ":" + ((min < 10) ? "0" : "") + min;
 		return s;
 	}
+
+    public static String getStringFromInt(int x) {
+        switch(x) {
+            case 1:
+                return "Sunday";
+            case 2:
+                return "Monday";
+            case 3:
+                return "Tuesday";
+            case 4:
+                return "Wednesday";
+            case 5:
+                return "Thursday";
+            case 6:
+                return "Friday";
+            case 7:
+                return "Saturday";
+            default:
+                return "ERROR";
+        }
+    }
 }

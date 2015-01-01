@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="6dp"
     android:orientation="vertical">
 
     <TextView
@@ -10,14 +9,13 @@
         android:layout_height="wrap_content"
         android:id="@+id/dialog_placeName"
         android:textSize="24dp"
-        android:text="Save update for <place>"/>
+        android:text="Save update for place" />
 
     <EditText
         android:id="@+id/dialog_placeUpdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textCapSentences"
-        android:selectAllOnFocus="true"
         android:hint="Class name" />
 
 </LinearLayout>

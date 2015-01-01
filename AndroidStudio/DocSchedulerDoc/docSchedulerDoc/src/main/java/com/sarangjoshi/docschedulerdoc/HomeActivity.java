@@ -13,27 +13,38 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.*;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
-public class HomeActivity extends Activity implements SetPlaceUpdateFragment.PlaceUpdateDialogListener {
+public class HomeActivity extends Activity implements SetPlaceUpdateFragment.PlaceUpdateDialogListener, Schedule.SaveToParseListener {
     public static final String SCHEDULE_KEY = "schedule";
-
+    public static ProgressDialog d;
     private static Schedule mSchedule;
 
-    TextView userView;
+    TextView userView, placesEmptyText;
     Button logoutBtn;
     ListView todaysPlacesList;
-
-    public static ProgressDialog d;
 
     int selectedPlace;
     List<String> todaysPlaces;
     ArrayAdapter<String> todaysPlacesAdapter;
+
+    String today;
+
+    /**
+     * Gets the current Schedule Java object.
+     */
+    public static Schedule getSchedule() {
+        return mSchedule;
+    }
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,20 +75,101 @@ public class HomeActivity extends Activity implements SetPlaceUpdateFragment.Pla
 
                 }
             });
+            placesEmptyText = (TextView) findViewById(R.id.todayEmptyText);
 
-            loadToday();
+            retrieveSchedule();
         }
     }
 
-    private void loadToday() {
-        ParseUser user = ParseUser.getCurrentUser();
-        ParseObject schedule = user.getParseObject(SCHEDULE_KEY);
-        schedule.fetchInBackground(new GetCallback<ParseObject>() {
-            @Override
-            public void done(ParseObject schedule, ParseException e) {
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_home, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
 
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()) {
+            case R.id.action_refresh:
+                retrieveSchedule();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    /**
+     * Once the Schedule Java object has been initialized, parses today's schedule into the view.
+     */
+    private void loadToday() {
+        // Goes through all the places and sees if any are today
+        today = DayTime.getStringFromInt(Calendar.getInstance().get(Calendar.DAY_OF_WEEK));
+        for (Place p : mSchedule.getPlaces()) {
+            for (DayTime t : p.getDayTimes()) {
+                if (t.getDay().equals(today)) {
+                    todaysPlaces.add(p.getName() + ": " + t.getStartString() + " to " + t.getEndString());
+                }
             }
-        });
+        }
+        if (!todaysPlaces.isEmpty()) {
+            // Places not empty
+            placesEmptyText.setVisibility(View.GONE);
+            todaysPlacesList.setVisibility(View.VISIBLE);
+            todaysPlacesAdapter.notifyDataSetChanged();
+        } else {
+            // Places empty
+            placesEmptyText.setVisibility(View.VISIBLE);
+            todaysPlacesList.setVisibility(View.GONE);
+        }
+        d.dismiss();
+    }
+
+    /**
+     * Retrieves the current schedule from the Parse database.
+     */
+    private void retrieveSchedule() {
+        d = ProgressDialog.show(this, "", "Loading...");
+        ParseUser user = ParseUser.getCurrentUser();
+        ParseObject o = user.getParseObject("schedule");
+        if (o != null)
+            o.fetchInBackground(new GetCallback<ParseObject>() {
+                public void done(ParseObject sched, ParseException e) {
+                    if (e == null)
+                        initSchedule(sched);
+                }
+            });
+        else {
+            d.dismiss();
+        }
+    }
+
+    /**
+     * Once the Schedule ParseObject has been retrieved, actually initialize the
+     * schedule into the Schedule Java object.
+     *
+     * @param sched
+     */
+    private void initSchedule(ParseObject sched) {
+        mSchedule.setInitialized(false);
+        mSchedule.resetPlaces();
+        // Get places
+        ParseRelation<ParseObject> placeRelation = sched
+                .getRelation(Schedule.PLACES_KEY);
+        placeRelation.getQuery().findInBackground(
+                new FindCallback<ParseObject>() {
+                    public void done(List<ParseObject> places, ParseException e) {
+                        if (e == null) {
+                            for (ParseObject place : places) {
+                                Place p = new Place();
+                                p.construct(place);
+                                // savePlaceId(place.getObjectId());
+                                mSchedule.getPlaces().add(p);
+                            }
+                            mSchedule.setInitialized(true);
+                            loadToday();
+                        }
+                    }
+                });
     }
 
     public void onBackPressed() {
@@ -114,13 +206,12 @@ public class HomeActivity extends Activity implements SetPlaceUpdateFragment.Pla
         }
     }
 
-    /**
-     * Gets the current Schedule Java object.
-     */
-    public static Schedule getSchedule() {
-        return mSchedule;
+    private void closeKeyboard(SetPlaceUpdateFragment v) {
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(v.placeUpdateEdit.getApplicationWindowToken(), 0);
     }
 
+    // INTERFACE IMPLEMENTATION
     @Override
     public void onDialogPositiveClick(SetPlaceUpdateFragment dialog, String newUpdate) {
         closeKeyboard(dialog);
@@ -132,8 +223,9 @@ public class HomeActivity extends Activity implements SetPlaceUpdateFragment.Pla
         closeKeyboard(dialog);
     }
 
-    private void closeKeyboard(SetPlaceUpdateFragment v) {
-        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.hideSoftInputFromWindow(v.placeUpdateEdit.getApplicationWindowToken(), 0);
+    @Override
+    public void onSaveCompleted() {
+        d.dismiss();
+        retrieveSchedule();
     }
 }

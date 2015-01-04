@@ -2,21 +2,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_margin="8dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/dialog_placeName"
         android:textSize="24dp"
-        android:text="Save update for place" />
+        android:text="Save update for today" />
 
     <EditText
-        android:id="@+id/dialog_placeUpdate"
+        android:id="@+id/dialog_update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textCapSentences"
-        android:hint="Class name" />
+        android:hint="Today's update" />
 
 </LinearLayout>
 <!-- From: file:/C:/Users/Sarang/Documents/GitHub/DocScheduler/AndroidStudio/DocSchedulerDoc/docSchedulerDoc/src/main/res/layout/dialog_placeupdate.xml -->

@@ -4,14 +4,10 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
-import android.net.Uri;
 import android.os.Bundle;
-import android.app.Fragment;
 import android.support.v4.app.DialogFragment;
-import android.text.Editable;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -24,8 +20,7 @@ public class SetPlaceUpdateFragment extends DialogFragment {
         public void onDialogNegativeClick(SetPlaceUpdateFragment dialog);
     }
 
-    public static final String PLACE_NAME_ARG = "place-name";
-    public static final String PLACE_UPDATE_ARG = "place-update";
+    public static final String UPDATE_ARG = "update";
 
     /**
      * Use this factory method to create a new instance of
@@ -33,11 +28,10 @@ public class SetPlaceUpdateFragment extends DialogFragment {
      *
      * @return A new instance of fragment SetPlaceUpdateFragment.
      */
-    public static SetPlaceUpdateFragment newInstance(String pName, String pUpdate) {
+    public static SetPlaceUpdateFragment newInstance(String pUpdate) {
         SetPlaceUpdateFragment fragment = new SetPlaceUpdateFragment();
         Bundle args = new Bundle();
-        args.putString(PLACE_NAME_ARG, pName);
-        args.putString(PLACE_UPDATE_ARG, pUpdate);
+        args.putString(UPDATE_ARG, pUpdate);
         fragment.setArguments(args);
         return fragment;
     }
@@ -50,15 +44,12 @@ public class SetPlaceUpdateFragment extends DialogFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            placeName = getArguments().getString(PLACE_NAME_ARG);
-            placeUpdate = getArguments().getString(PLACE_UPDATE_ARG);
+            update = getArguments().getString(UPDATE_ARG);
         }
     }
 
-    public String placeName;
-    public String placeUpdate;
-    public TextView placeTitle;
-    public EditText placeUpdateEdit;
+    public String update;
+    public EditText updateEdit;
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -66,26 +57,23 @@ public class SetPlaceUpdateFragment extends DialogFragment {
 
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View v = inflater.inflate(R.layout.dialog_placeupdate, null);
-        placeTitle = (TextView) v.findViewById(R.id.dialog_placeName);
-        placeUpdateEdit = (EditText) v.findViewById(R.id.dialog_placeUpdate);
+        updateEdit = (EditText) v.findViewById(R.id.dialog_update);
 
-        placeTitle.setText("Set update for " + placeName);
-        if (placeUpdate == null || placeUpdate.trim().equals(""))
-            // No update
-            placeUpdateEdit.setText("");
+        if (update == null || update.trim().equals(""))
+            // No preexistent update
+            updateEdit.setText("");
         else
             // Pre-existent update
-            placeUpdateEdit.setText(placeUpdate);
+            updateEdit.setText(update);
 
-
-        placeUpdateEdit.requestFocus();
+        updateEdit.requestFocus();
 
         builder.setTitle("Save update")
                 .setView(v)
                 .setPositiveButton("Save", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         // Update to be saved
-                        String newUpdate = placeUpdateEdit.getText().toString();
+                        String newUpdate = updateEdit.getText().toString();
                         mListener.onDialogPositiveClick(SetPlaceUpdateFragment.this, newUpdate);
                     }
                 })

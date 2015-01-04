@@ -78,6 +78,33 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:hint="No update"
+            android:id="@+id/updateEdit" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/updateProgressBar"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/saveUpdateBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:onClick="saveUpdate"
+            android:text="Post Update" />
+    </LinearLayout>
+
     <Button
         android:id="@+id/editSchedBtn"
         android:layout_width="wrap_content"

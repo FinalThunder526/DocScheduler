@@ -214,6 +214,21 @@ public class Schedule {
         mInitialized = init;
     }
 
+    /**
+     * Gets the Place with the given name.
+     *
+     * @param name the name of the place wanted
+     * @return the place
+     */
+    public Place getPlace(String name) {
+        for(Place p : mPlaces) {
+            if(p.getName().equals(name)) {
+                return p;
+            }
+        }
+        return null;
+    }
+
     public interface SaveToParseListener {
         public void onSaveCompleted();
     }

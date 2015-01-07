@@ -232,6 +232,8 @@
     <string name="public_info">I recognize that all the information herein (other than the password) is public information.</string>
     <string name="refresh">Refresh</string>
     <string name="signup_pass_hint">Password (6+ characters)</string>
+    <string name="title_activity_patient_home">PatientHomeActivity</string>
+    <string name="title_activity_patient_view_schedule">PatientViewScheduleActivity</string>
     <!-- From: file:/C:/Users/Sarang/Documents/GitHub/DocScheduler/AndroidStudio/DocSchedulerDoc/docSchedulerDoc/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light">

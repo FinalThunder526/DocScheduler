@@ -28,7 +28,6 @@ import com.facebook.*;
 import com.facebook.model.GraphUser;
 import com.facebook.widget.LoginButton;
 import com.facebook.widget.ProfilePictureView;
-import com.sarangjoshi.docschedulerdoc.R;
 
 public class AWSLoginFragment extends Fragment {
 	private static final String TAG = "LoginFragment";
@@ -87,7 +86,7 @@ public class AWSLoginFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.activity_login, container, false);
+		View view = inflater.inflate(R.layout.activity_old_login, container, false);
 		loginName = (TextView) view.findViewById(R.id.loginName);
 		profilePictureView = (ProfilePictureView) view
 				.findViewById(R.id.profilePicture);

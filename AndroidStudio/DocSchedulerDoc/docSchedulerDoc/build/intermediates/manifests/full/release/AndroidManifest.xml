@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sarangjoshi.docschedulerdoc"
-    android:versionCode="1"
-    android:versionName="1.0.0" >
+    android:versionCode="2"
+    android:versionName="1.0.1" >
 
     <uses-sdk
         android:minSdkVersion="16"
@@ -10,6 +10,9 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name="com.sarangjoshi.docschedulerdoc.ParseApplication"
@@ -19,14 +22,12 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.facebook.LoginActivity"
-            android:label="@string/facebook_login" >
-        </activity>
+            android:label="@string/facebook_login" />
         <activity
-            android:name="com.sarangjoshi.docschedulerdoc.LoginActivity"
-            android:label="@string/app_name" >
-        </activity>
+            android:name="com.sarangjoshi.docschedulerdoc.MainActivity"
+            android:label="@string/app_name" />
         <activity
-            android:name="com.sarangjoshi.docschedulerdoc.HomeActivity"
+            android:name="com.sarangjoshi.docschedulerdoc.DocHomeActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,35 +36,35 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.sarangjoshi.docschedulerdoc.SignupActivity"
-            android:label="@string/app_name"
-            android:parentActivityName="com.sarangjoshi.docschedulerdoc.LoginActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.sarangjoshi.docschedulerdoc.LoginActivity" />
-        </activity>
+            android:name="com.sarangjoshi.docschedulerdoc.DocCreateEditProfileActivity"
+            android:label="@string/app_name" />
         <activity
-            android:name="com.sarangjoshi.docschedulerdoc.EditScheduleActivity"
+            android:name="com.sarangjoshi.docschedulerdoc.DocEditScheduleActivity"
             android:label="@string/edit_sched_name"
-            android:parentActivityName="com.sarangjoshi.docschedulerdoc.HomeActivity" >
+            android:parentActivityName="com.sarangjoshi.docschedulerdoc.DocHomeActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.sarangjoshi.docschedulerdoc.HomeActivity" >
-            </meta-data>
+                android:value=".DocHomeActivity" />
         </activity>
         <activity
-            android:name="com.sarangjoshi.docschedulerdoc.EditPlaceActivity"
+            android:name="com.sarangjoshi.docschedulerdoc.DocEditPlaceActivity"
             android:label="@string/edit_place_name"
-            android:parentActivityName="com.sarangjoshi.docschedulerdoc.EditScheduleActivity" >
+            android:parentActivityName="com.sarangjoshi.docschedulerdoc.DocEditScheduleActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.sarangjoshi.docschedulerdoc.EditScheduleActivity" >
-            </meta-data>
+                android:value="com.sarangjoshi.docschedulerdoc.DocEditScheduleActivity" />
         </activity>
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.sarangjoshi.docschedulerdoc.PatientHomeActivity"
+            android:label="@string/title_activity_patient_home" />
+        <activity
+            android:name="com.sarangjoshi.docschedulerdoc.PatientViewScheduleActivity"
+            android:label="@string/title_activity_patient_view_schedule" />
     </application>
 
 </manifest>

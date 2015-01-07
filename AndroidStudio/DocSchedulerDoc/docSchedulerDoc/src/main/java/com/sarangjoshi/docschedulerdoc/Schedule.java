@@ -9,7 +9,6 @@ package com.sarangjoshi.docschedulerdoc;
 import java.util.*;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.widget.Toast;
 
 import com.parse.*;
@@ -108,7 +107,7 @@ public class Schedule {
     private void saveSchedule(final List<ParseObject> parsePlaces) {
         // Check for existing schedule
         ParseObject x = ParseUser.getCurrentUser().getParseObject(
-                HomeActivity.SCHEDULE_KEY);
+                DocHomeActivity.SCHEDULE_KEY);
         boolean isEdit = x != null;
         if (isEdit)
             scheduleObject = x;

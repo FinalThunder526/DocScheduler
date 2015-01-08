@@ -27,10 +27,14 @@ public class PatientHomeActivity extends Activity {
     private List<String> doctors;
     private List<String> docObjectIds;
 
+    Data mData;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_home);
+
+        mData = new Data(this);
 
         doctorsList = (ListView) findViewById(R.id.doctorsList);
         doctors = new ArrayList<String>();
@@ -43,6 +47,7 @@ public class PatientHomeActivity extends Activity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(PatientHomeActivity.this, PatientViewScheduleActivity.class);
                 intent.putExtra(DOC_ID, docObjectIds.get(position));
+                startActivity(intent);
             }
         });
 
@@ -71,7 +76,7 @@ public class PatientHomeActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.menu_patient_home, menu);
         return true;
     }
 
@@ -81,7 +86,11 @@ public class PatientHomeActivity extends Activity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_switch_to_doctor) {
+            mData.saveIsPatientMode(false);
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            finish();
             return true;
         }
         return super.onOptionsItemSelected(item);

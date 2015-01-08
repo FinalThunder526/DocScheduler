@@ -26,8 +26,8 @@ import java.util.List;
 
 public class DocHomeActivity extends FragmentActivity implements Schedule.SaveToParseListener, SetPlaceUpdateFragment.PlaceUpdateDialogListener {
     public static final String SCHEDULE_KEY = "schedule";
-    public static ProgressDialog d;
     private static Schedule mSchedule;
+    Data mData;
 
     TextView userView, placesEmptyText;
     Button logoutBtn, saveUpdateBtn;
@@ -45,9 +45,15 @@ public class DocHomeActivity extends FragmentActivity implements Schedule.SaveTo
         super.onCreate(savedInstanceState);
 
         ParseUser user = ParseUser.getCurrentUser();
-        mSchedule = new Schedule(this);
+        mSchedule = new Schedule(this, false);
+        mData = new Data(this);
 
-        if (user == null || user.getSessionToken() == null) {
+        if(mData.isPatientMode()) {
+            // Patient mode
+            Intent intent = new Intent(this, PatientHomeActivity.class);
+            startActivity(intent);
+            finish();
+        } else if (user == null || user.getSessionToken() == null) {
             // User not logged in
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
@@ -68,8 +74,8 @@ public class DocHomeActivity extends FragmentActivity implements Schedule.SaveTo
                     dialog.show(getSupportFragmentManager(), "SetPlaceUpdateFragment");
                 }
             });
-            todaysPlaces = new ArrayList<String>();
-            todaysPlacesAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, todaysPlaces);
+            todaysPlaces = new ArrayList<>();
+            todaysPlacesAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, todaysPlaces);
             todaysPlacesList = (ListView) findViewById(R.id.todayList);
             todaysPlacesList.setAdapter(todaysPlacesAdapter);
             placesEmptyText = (TextView) findViewById(R.id.todayEmptyText);
@@ -86,7 +92,7 @@ public class DocHomeActivity extends FragmentActivity implements Schedule.SaveTo
      * Retrieves the current schedule from the Parse database.
      */
     private void retrieveSchedule() {
-        d = ProgressDialog.show(this, "", "Loading...");
+        Data.d = ProgressDialog.show(this, "", "Loading...");
         ParseUser user = ParseUser.getCurrentUser();
         ParseObject o = user.getParseObject("schedule");
         if (o != null)
@@ -97,15 +103,13 @@ public class DocHomeActivity extends FragmentActivity implements Schedule.SaveTo
                 }
             });
         else {
-            d.dismiss();
+            Data.d.dismiss();
         }
     }
 
     /**
      * Once the Schedule ParseObject has been retrieved, actually initialize the
      * schedule into the Schedule Java object.
-     *
-     * @param sched
      */
     private void initSchedule(ParseObject sched) {
         mSchedule.setInitialized(false);
@@ -163,7 +167,7 @@ public class DocHomeActivity extends FragmentActivity implements Schedule.SaveTo
      */
     private void loadUpdate() {
         ParseQuery<ParseObject> query = ParseQuery.getQuery("DayEdit");
-        String today = getTodayString();
+        String today = Data.getTodayString();
         query.whereEqualTo("day", today);
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override
@@ -179,7 +183,7 @@ public class DocHomeActivity extends FragmentActivity implements Schedule.SaveTo
                     }
                     updateViewsLocal();
                 }
-                d.dismiss();
+                Data.d.dismiss();
             }
         });
     }
@@ -194,7 +198,7 @@ public class DocHomeActivity extends FragmentActivity implements Schedule.SaveTo
         updateText.setVisibility(View.GONE);
 
         ParseQuery<ParseObject> query = ParseQuery.getQuery("DayEdit");
-        final String today = getTodayString();
+        final String today = Data.getTodayString();
         query.whereEqualTo("day", today);
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override
@@ -278,7 +282,7 @@ public class DocHomeActivity extends FragmentActivity implements Schedule.SaveTo
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == RESULT_OK) {
-            d = ProgressDialog.show(this, "", "Saving...");
+            Data.d = ProgressDialog.show(this, "", "Saving...");
             mSchedule.saveToParse();
         }
     }
@@ -286,7 +290,7 @@ public class DocHomeActivity extends FragmentActivity implements Schedule.SaveTo
     // INTERFACE IMPLEMENTATION
     @Override
     public void onSaveCompleted() {
-        d.dismiss();
+        Data.d.dismiss();
         retrieveSchedule();
     }
 
@@ -309,20 +313,6 @@ public class DocHomeActivity extends FragmentActivity implements Schedule.SaveTo
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(d.updateEdit.getApplicationWindowToken(), 0);
         // imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
-    }
-
-    /**
-     * Format: DD-MM-YYYY
-     */
-    private String getTodayString() {
-        Calendar c = Calendar.getInstance();
-        int day = c.get(Calendar.DAY_OF_MONTH), month = c.get(Calendar.MONTH) + 1,
-                year = c.get(Calendar.YEAR);
-        String s = ((day < 10) ? "0" + day : day) + "-";
-        s += ((month < 10) ? "0" + month : month) + "-";
-        s += year;
-
-        return s;
     }
 
     /**

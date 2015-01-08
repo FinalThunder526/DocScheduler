@@ -22,6 +22,7 @@ public class MainActivity extends FragmentActivity {
 	public static final int LOGGED_OUT = 0;
 	
 	private Fragment mFragment;
+    Data mData;
 
 	boolean isAWS = false;
 
@@ -40,6 +41,8 @@ public class MainActivity extends FragmentActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
+        mData = new Data(this);
 
 		if (isAWS)
 			if (savedInstanceState == null) {
@@ -168,6 +171,7 @@ public class MainActivity extends FragmentActivity {
 	}
 
     public void switchToPatient(View v) {
+        mData.saveIsPatientMode(true);
         Intent intent = new Intent(this, PatientHomeActivity.class);
         startActivity(intent);
         finish();

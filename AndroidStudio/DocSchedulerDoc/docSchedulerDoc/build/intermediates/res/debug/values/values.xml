@@ -221,6 +221,8 @@
     <string name="com_facebook_usersettingsfragment_not_logged_in">Not logged in</string>
     <!-- From: file:/C:/Users/Sarang/Documents/GitHub/DocScheduler/AndroidStudio/DocSchedulerDoc/docSchedulerDoc/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="default_doctor_name">Doctor Name</string>
+    <string name="default_update">No update.</string>
     <string name="edit_place_name">Edit Place</string>
     <string name="edit_sched_name">Weekly Schedule</string>
     <string name="facebook_app_id">1536310793281170</string>
@@ -232,8 +234,9 @@
     <string name="public_info">I recognize that all the information herein (other than the password) is public information.</string>
     <string name="refresh">Refresh</string>
     <string name="signup_pass_hint">Password (6+ characters)</string>
-    <string name="title_activity_patient_home">PatientHomeActivity</string>
-    <string name="title_activity_patient_view_schedule">PatientViewScheduleActivity</string>
+    <string name="switch_to_doctor">Doctor View</string>
+    <string name="title_activity_patient_home">Patient Home</string>
+    <string name="title_activity_patient_view_schedule">Doctor Schedule</string>
     <!-- From: file:/C:/Users/Sarang/Documents/GitHub/DocScheduler/AndroidStudio/DocSchedulerDoc/docSchedulerDoc/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light">

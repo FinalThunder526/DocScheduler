@@ -25,7 +25,11 @@
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="refresh">Refresh</string>
-    <string name="title_activity_patient_home">PatientHomeActivity</string>
-    <string name="title_activity_patient_view_schedule">PatientViewScheduleActivity</string>
+
+    <string name="title_activity_patient_home">Patient Home</string>
+    <string name="title_activity_patient_view_schedule">Doctor Schedule</string>
+    <string name="default_update">No update.</string>
+    <string name="default_doctor_name">Doctor Name</string>
+    <string name="switch_to_doctor">Doctor View</string>
 
 </resources>

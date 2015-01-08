@@ -31,10 +31,13 @@ public class Schedule {
      *
      * @param context
      */
-    public Schedule(Context context) {
+    public Schedule(Context context, boolean readOnly) {
         mPlaces = new ArrayList<Place>();
         mContext = context;
-        mListener = (SaveToParseListener) context;
+        if (!readOnly)
+            mListener = (SaveToParseListener) context;
+        else
+            mListener = null;
     }
 
     /**
@@ -220,8 +223,8 @@ public class Schedule {
      * @return the place
      */
     public Place getPlace(String name) {
-        for(Place p : mPlaces) {
-            if(p.getName().equals(name)) {
+        for (Place p : mPlaces) {
+            if (p.getName().equals(name)) {
                 return p;
             }
         }

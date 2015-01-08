@@ -64,7 +64,12 @@
             android:label="@string/title_activity_patient_home"></activity>
         <activity
             android:name=".PatientViewScheduleActivity"
-            android:label="@string/title_activity_patient_view_schedule"></activity>
+            android:label="@string/title_activity_patient_view_schedule"
+            android:parentActivityName=".PatientHomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sarangjoshi.docschedulerdoc.DocEditScheduleActivity" />
+        </activity>
     </application>
 
 </manifest>

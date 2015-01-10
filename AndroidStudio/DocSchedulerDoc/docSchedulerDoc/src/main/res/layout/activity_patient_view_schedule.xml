@@ -11,13 +11,15 @@
         android:text="@string/default_doctor_name"
         android:textSize="25sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/patTodayUpdate"
         android:text="@string/default_update"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
 
     <ListView
         android:id="@+id/patTodaySchedule"

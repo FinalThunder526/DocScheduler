@@ -26,6 +26,7 @@ import java.util.List;
 
 public class DocHomeActivity extends FragmentActivity implements Schedule.SaveToParseListener, SetPlaceUpdateFragment.PlaceUpdateDialogListener {
     public static final String SCHEDULE_KEY = "schedule";
+    public static final String DAYEDITS_KEY = "updates";
     private static Schedule mSchedule;
     Data mData;
 
@@ -40,6 +41,8 @@ public class DocHomeActivity extends FragmentActivity implements Schedule.SaveTo
 
     String today;
     String todaysUpdate = "";
+    boolean isFirstUpdate = true;
+    private ParseObject todayUpdateObj;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +51,7 @@ public class DocHomeActivity extends FragmentActivity implements Schedule.SaveTo
         mSchedule = new Schedule(this, false);
         mData = new Data(this);
 
-        if(mData.isPatientMode()) {
+        if (mData.isPatientMode()) {
             // Patient mode
             Intent intent = new Intent(this, PatientHomeActivity.class);
             startActivity(intent);
@@ -159,15 +162,17 @@ public class DocHomeActivity extends FragmentActivity implements Schedule.SaveTo
             placesEmptyText.setVisibility(View.VISIBLE);
             todaysPlacesList.setVisibility(View.GONE);
         }
-        loadUpdate();
+        getUpdateObj();
     }
 
     /**
-     * Loads today's update.
+     * Downloads the object.
      */
-    private void loadUpdate() {
-        ParseQuery<ParseObject> query = ParseQuery.getQuery("DayEdit");
-        String today = Data.getTodayString();
+    private void getUpdateObj() {
+        ParseRelation<ParseObject> dayEdits = ParseUser.getCurrentUser().getRelation(DAYEDITS_KEY);
+        //ParseQuery<ParseObject> query = ParseQuery.getQuery("DayEdit");
+        ParseQuery<ParseObject> query = dayEdits.getQuery();
+        today = Data.getTodayString();
         query.whereEqualTo("day", today);
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override
@@ -175,11 +180,17 @@ public class DocHomeActivity extends FragmentActivity implements Schedule.SaveTo
                 if (e == null) {
                     if (!parseObjects.isEmpty()) {
                         // Current update exists
-                        ParseObject todayUpdateObj = parseObjects.get(0);
-                        todaysUpdate = (String) todayUpdateObj.get("status");
+                        todayUpdateObj = parseObjects.get(0);
+                        isFirstUpdate = false;
                     } else {
                         // No update
+                        todayUpdateObj = null;
+                        isFirstUpdate = true;
+                    }
+                    if (todayUpdateObj == null) {
                         todaysUpdate = "";
+                    } else {
+                        todaysUpdate = (String) todayUpdateObj.get("status");
                     }
                     updateViewsLocal();
                 }
@@ -189,7 +200,6 @@ public class DocHomeActivity extends FragmentActivity implements Schedule.SaveTo
     }
 
     // FUNCTIONS
-
     /**
      * Opens a new dialog to save update for the chosen place
      */
@@ -197,34 +207,49 @@ public class DocHomeActivity extends FragmentActivity implements Schedule.SaveTo
         updateProgressBar.setVisibility(View.VISIBLE);
         updateText.setVisibility(View.GONE);
 
-        ParseQuery<ParseObject> query = ParseQuery.getQuery("DayEdit");
-        final String today = Data.getTodayString();
-        query.whereEqualTo("day", today);
-        query.findInBackground(new FindCallback<ParseObject>() {
+        if (todayUpdateObj == null)
+            todayUpdateObj = new ParseObject("DayEdit");
+        today = Data.getTodayString();
+        todayUpdateObj.put("status", todaysUpdate);
+        todayUpdateObj.put("day", today);
+        todayUpdateObj.saveInBackground(new SaveCallback() {
             @Override
-            public void done(List<ParseObject> parseObjects, ParseException e) {
+            public void done(ParseException e) {
                 if (e == null) {
-                    ParseObject todayUpdateObj;
-                    // First, checks to see if there is an existent update
-                    if (!parseObjects.isEmpty()) {
-                        todayUpdateObj = parseObjects.get(0);
-                    } else {
-                        todayUpdateObj = new ParseObject("DayEdit");
-                    }
-                    todayUpdateObj.put("status", todaysUpdate);
-                    todayUpdateObj.put("day", today);
-                    todayUpdateObj.saveInBackground(new SaveCallback() {
-                        @Override
-                        public void done(ParseException e) {
-                            if (e == null) {
-                                Toast.makeText(DocHomeActivity.this, "Saved!", Toast.LENGTH_SHORT).show();
-                                updateViewsLocal();
-                            }
-                        }
-                    });
+                    // Links to the current user
+                    saveUpdateToDoctor();
                 }
             }
         });
+    }
+
+    /**
+     * Now that the object has been saved, confirms that this object is a part of the relation
+     * for the current user.
+     */
+    private void saveUpdateToDoctor() {
+        if (isFirstUpdate) {
+            // Need to add object to the relation.
+            ParseUser user = ParseUser.getCurrentUser();
+            if (user != null) {
+                ParseRelation<ParseObject> allEdits = user.getRelation(DAYEDITS_KEY);
+                allEdits.add(todayUpdateObj);
+                user.saveInBackground(new SaveCallback() {
+                    @Override
+                    public void done(ParseException e) {
+                        isFirstUpdate = false;
+                        doneSavingUpdate();
+                    }
+                });
+            }
+        } else {
+            doneSavingUpdate();
+        }
+    }
+
+    private void doneSavingUpdate() {
+        Toast.makeText(DocHomeActivity.this, "Saved!", Toast.LENGTH_SHORT).show();
+        updateViewsLocal();
     }
 
     /**

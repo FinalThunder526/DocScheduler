@@ -25,6 +25,7 @@ import java.util.List;
  */
 public class PatientViewScheduleActivity extends Activity {
     private ParseUser mDocUser;
+    private ParseObject todayUpdateObj;
     private String mObjectId, today;
 
     private TextView doctorName, todayUpdate;
@@ -69,6 +70,7 @@ public class PatientViewScheduleActivity extends Activity {
      */
     private void updateViews() {
         doctorName.setText(mDocUser.getString("name"));
+        doctorName.setVisibility(View.VISIBLE);
         // load today
         retrieveSchedule();
     }
@@ -86,7 +88,7 @@ public class PatientViewScheduleActivity extends Activity {
                 }
             });
         else {
-            Data.d.dismiss();
+            loadUpdate();
         }
     }
 
@@ -146,11 +148,14 @@ public class PatientViewScheduleActivity extends Activity {
     }
 
     /**
-     * Loads today's update.
+     * Downloads the object.
      */
     private void loadUpdate() {
-        ParseQuery<ParseObject> query = ParseQuery.getQuery("DayEdit");
-        String today = Data.getTodayString();
+        todayUpdate.setVisibility(View.VISIBLE);
+        ParseRelation<ParseObject> dayEdits = mDocUser.getRelation(DocHomeActivity.DAYEDITS_KEY);
+        //ParseQuery<ParseObject> query = ParseQuery.getQuery("DayEdit");
+        ParseQuery<ParseObject> query = dayEdits.getQuery();
+        today = Data.getTodayString();
         query.whereEqualTo("day", today);
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override
@@ -158,12 +163,18 @@ public class PatientViewScheduleActivity extends Activity {
                 if (e == null) {
                     if (!parseObjects.isEmpty()) {
                         // Current update exists
-                        ParseObject todayUpdateObj = parseObjects.get(0);
-                        todayUpdate.setText((String) todayUpdateObj.get("status"));
+                        todayUpdateObj = parseObjects.get(0);
                     } else {
                         // No update
-                        todayUpdate.setText("");
+                        todayUpdateObj = null;
                     }
+                    String todaysUpdate;
+                    if (todayUpdateObj == null) {
+                        todaysUpdate = "No update.";
+                    } else {
+                        todaysUpdate = (String) todayUpdateObj.get("status");
+                    }
+                    todayUpdate.setText(todaysUpdate);
                 }
                 Data.d.dismiss();
             }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sarangjoshi.docschedulerdoc"
-    android:versionCode="2"
-    android:versionName="1.0.1" >
+    android:versionCode="3"
+    android:versionName="1.1.0" >
 
     <uses-sdk
         android:minSdkVersion="16"
@@ -64,7 +64,12 @@
             android:label="@string/title_activity_patient_home" />
         <activity
             android:name="com.sarangjoshi.docschedulerdoc.PatientViewScheduleActivity"
-            android:label="@string/title_activity_patient_view_schedule" />
+            android:label="@string/title_activity_patient_view_schedule"
+            android:parentActivityName="com.sarangjoshi.docschedulerdoc.PatientHomeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sarangjoshi.docschedulerdoc.DocEditScheduleActivity" />
+        </activity>
     </application>
 
 </manifest>

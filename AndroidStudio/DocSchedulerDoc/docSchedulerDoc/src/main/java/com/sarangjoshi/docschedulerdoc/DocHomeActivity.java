@@ -305,6 +305,24 @@ public class DocHomeActivity extends FragmentActivity implements Schedule.SaveTo
         startActivityForResult(intent, 0);
     }
 
+    public void editProfile(View v) {
+        Intent intent = new Intent(this, DocCreateEditProfileActivity.class);
+        intent.putExtra(DocCreateEditProfileActivity.IS_CREATE_MODE, false);
+        // Bundles details
+        ParseUser user = ParseUser.getCurrentUser();
+        String[] docDetails = new String[7];
+        docDetails[0] = user.getString(DocCreateEditProfileActivity.EMAIL_KEY);
+        docDetails[1] = "******";
+        docDetails[2] = user.getString(DocCreateEditProfileActivity.NAME_KEY);
+        docDetails[3] = user.getString(DocCreateEditProfileActivity.PHONE_KEY);
+        docDetails[4] = user.getString(DocCreateEditProfileActivity.A_O_STUDY_KEY);
+        docDetails[5] = user.getString(DocCreateEditProfileActivity.EXP_KEY);
+        docDetails[6] = user.getString(DocCreateEditProfileActivity.F_O_EXP_KEY);
+
+        intent.putExtra(DocCreateEditProfileActivity.DETAILS_KEY, docDetails);
+        startActivity(intent);
+    }
+
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == RESULT_OK) {
             Data.d = ProgressDialog.show(this, "", "Saving...");

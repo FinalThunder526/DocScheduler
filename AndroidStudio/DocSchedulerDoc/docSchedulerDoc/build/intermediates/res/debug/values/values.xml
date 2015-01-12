@@ -224,6 +224,7 @@
     <string name="default_doctor_name">Doctor Name</string>
     <string name="default_update">No update.</string>
     <string name="edit_place_name">Edit Place</string>
+    <string name="edit_profile">Edit Profile</string>
     <string name="edit_sched_name">Weekly Schedule</string>
     <string name="facebook_app_id">1536310793281170</string>
     <string name="facebook_login">Facebook Login</string>

@@ -49,11 +49,11 @@ public class PatientViewScheduleActivity extends Activity {
         placeAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, placeList);
         placeListView.setAdapter(placeAdapter);
 
-        Data.d = ProgressDialog.show(this, "", "Loading...");
         loadDoctor();
     }
 
     private void loadDoctor() {
+        Data.d = ProgressDialog.show(this, "", "Loading...");
         ParseQuery<ParseUser> query = ParseUser.getQuery();
         query.getInBackground(mObjectId, new GetCallback<ParseUser>() {
             @Override

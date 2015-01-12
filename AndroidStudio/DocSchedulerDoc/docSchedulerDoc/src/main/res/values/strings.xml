@@ -31,5 +31,6 @@
     <string name="default_update">No update.</string>
     <string name="default_doctor_name">Doctor Name</string>
     <string name="switch_to_doctor">Doctor View</string>
+    <string name="edit_profile">Edit Profile</string>
 
 </resources>

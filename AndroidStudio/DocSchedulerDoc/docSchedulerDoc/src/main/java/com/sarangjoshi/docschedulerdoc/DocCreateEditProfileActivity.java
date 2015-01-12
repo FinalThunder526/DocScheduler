@@ -28,6 +28,16 @@ import android.widget.Toast;
 
 public class DocCreateEditProfileActivity extends Activity {
     public static final String IS_CREATE_MODE = "create-mode";
+
+    public static final String EMAIL_KEY = "email",
+            PASSWORD_KEY = "password",
+            NAME_KEY = "name",
+            PHONE_KEY = "phone",
+            A_O_STUDY_KEY = "areaofstudy",
+            EXP_KEY = "experience",
+            F_O_EXP_KEY = "fieldofexpertise",
+            DETAILS_KEY = "doc-details";
+
     boolean isCreate = true;
 
     ProgressDialog mDialog;
@@ -60,9 +70,7 @@ public class DocCreateEditProfileActivity extends Activity {
         createProfileBtn.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 closeKeyboard();
-                if (isCreate)
-                    signup();
-                else save();
+                save();
             }
         });
         email = (EditText) findViewById(R.id.signupEmail);
@@ -112,61 +120,32 @@ public class DocCreateEditProfileActivity extends Activity {
 
         if (!isCreate)
             setupEdit();
-    }
-
-    private void save() {
-        ParseUser user = ParseUser.getCurrentUser();
-
-        if (user != null && user.getSessionToken() != null) {
-            // Step 1: Checks validity of fields
-            if (!hasErrors()) {
-
-                mDialog = ProgressDialog.show(this, "", "Saving...");
-
-                user.setPassword(getText(password));
-                user.setEmail(getText(email).toLowerCase());
-
-                user.put("name", getText(name));
-                user.put("phone", getText(phone));
-                user.put("areaofstudy", getText(study));
-                user.put("experience", getText(experience));
-                user.put("fieldofexpertise", getText(expertise));
-
-                user.saveInBackground(new SaveCallback() {
-                    @Override
-                    public void done(ParseException e) {
-                        mDialog.dismiss();
-                        if (e == null) {
-                            // User saved
-                            Toast.makeText(DocCreateEditProfileActivity.this,
-                                    "Profile saved!", Toast.LENGTH_SHORT).show();
-                            // Intent intent = new
-                            // Intent(DocCreateEditProfileActivity.this,HomeActivity.class);
-                            // startActivity(intent);
-                            finish();
-                        } else {
-                            Toast.makeText(DocCreateEditProfileActivity.this, e.getMessage(),
-                                    Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-            } else {
-                Toast.makeText(this, "Fix form errors.", Toast.LENGTH_LONG)
-                        .show();
-            }
-        } else {
-            Toast.makeText(this, "Signup error", Toast.LENGTH_LONG).show();
-        }
+        else
+            email.requestFocus();
     }
 
     /**
      * Sets up the edit profile screen.
      */
     private void setupEdit() {
-        title.setText("Edit Profile");
-        email.setEnabled(false);
-        publicInfoBox.setVisibility(View.INVISIBLE);
-        createProfileBtn.setText("Save Profile");
+        if (!isCreate) {
+            title.setText("Edit Profile");
+            email.setEnabled(false);
+            password.setEnabled(false);
+            publicInfoBox.setChecked(true);
+            publicInfoBox.setVisibility(View.INVISIBLE);
+            createProfileBtn.setText("Save Profile");
+
+            // Fill in existing data
+            String[] docDetails = getIntent().getStringArrayExtra(DETAILS_KEY);
+            email.setText(docDetails[0]);
+            password.setText(docDetails[1]);
+            name.setText(docDetails[2]);
+            phone.setText(docDetails[3]);
+            study.setText(docDetails[4]);
+            experience.setText(docDetails[5]);
+            expertise.setText(docDetails[6]);
+        }
     }
 
     private class EditTextValidListener implements OnFocusChangeListener {
@@ -190,19 +169,21 @@ public class DocCreateEditProfileActivity extends Activity {
      * Checks the Parse database if a user with the given email exists.
      */
     public void checkIfEmailExists() {
-        isEmailValidBar.setVisibility(View.VISIBLE);
-        email.setBackgroundColor(getResources().getColor(R.color.valid_green));
-        ParseQuery<ParseUser> query = ParseUser.getQuery();
-        query.whereEqualTo("email", getText(email));
-        query.findInBackground(new FindCallback<ParseUser>() {
-            public void done(List<ParseUser> users, ParseException e) {
-                if (e == null) { // no error
-                    isEmailValidBar.setVisibility(View.GONE);
-                    isEmailValid = true;
-                    fieldValid(0, users.size() == 0);
+        if (isCreate) {
+            isEmailValidBar.setVisibility(View.VISIBLE);
+            email.setBackgroundColor(getResources().getColor(R.color.valid_green));
+            ParseQuery<ParseUser> query = ParseUser.getQuery();
+            query.whereEqualTo("email", getText(email));
+            query.findInBackground(new FindCallback<ParseUser>() {
+                public void done(List<ParseUser> users, ParseException e) {
+                    if (e == null) { // no error
+                        isEmailValidBar.setVisibility(View.GONE);
+                        isEmailValid = true;
+                        fieldValid(0, users.size() == 0);
+                    }
                 }
-            }
-        });
+            });
+        }
     }
 
     /**
@@ -223,51 +204,65 @@ public class DocCreateEditProfileActivity extends Activity {
     /**
      * Signup sequence.
      */
-    private void signup() {
+    private void save() {
         ParseUser user = ParseUser.getCurrentUser();
 
-        if (user == null || user.getSessionToken() == null) {
+        if ((isCreate && (user == null || user.getSessionToken() == null))
+                || (!isCreate && (user != null))) {
             // Step 1: Checks validity of fields
             if (!hasErrors()) {
 
-                mDialog = ProgressDialog.show(this, "", "Signing up...");
+                mDialog = ProgressDialog.show(this, "", (isCreate) ? "Signing up..." : "Saving...");
 
-                user = new ParseUser();
+                if (isCreate)
+                    user = new ParseUser();
+
                 user.setUsername(getText(email));
                 user.setPassword(getText(password));
                 user.setEmail(getText(email));
 
-                user.put("name", getText(name));
-                user.put("phone", getText(phone));
-                user.put("areaofstudy", getText(study));
-                user.put("experience", getText(experience));
-                user.put("fieldofexpertise", getText(expertise));
+                user.put(NAME_KEY, getText(name));
+                user.put(PHONE_KEY, getText(phone));
+                user.put(A_O_STUDY_KEY, getText(study));
+                user.put(EXP_KEY, getText(experience));
+                user.put(F_O_EXP_KEY, getText(expertise));
 
-                user.signUpInBackground(new SignUpCallback() {
-                    @Override
-                    public void done(ParseException e) {
-                        mDialog.dismiss();
-                        if (e == null) {
-                            // User created
-                            Toast.makeText(DocCreateEditProfileActivity.this,
-                                    "User created!", Toast.LENGTH_SHORT).show();
-                            // Intent intent = new
-                            // Intent(DocCreateEditProfileActivity.this,HomeActivity.class);
-                            // startActivity(intent);
-                            finish();
-                        } else {
-                            Toast.makeText(DocCreateEditProfileActivity.this, e.getMessage(),
-                                    Toast.LENGTH_SHORT).show();
+                if (isCreate)
+                    user.signUpInBackground(new SignUpCallback() {
+                        @Override
+                        public void done(ParseException e) {
+                            if (e == null)
+                                doneSavingUser();
+                            else
+                                Toast.makeText(DocCreateEditProfileActivity.this, e.getMessage(),
+                                        Toast.LENGTH_SHORT).show();
                         }
-                    }
-                });
+                    });
+                else
+                    user.saveInBackground(new SaveCallback() {
+                        @Override
+                        public void done(ParseException e) {
+                            if (e == null)
+                                doneSavingUser();
+                            else
+                                Toast.makeText(DocCreateEditProfileActivity.this, e.getMessage(),
+                                        Toast.LENGTH_SHORT).show();
+                        }
+                    });
             } else {
                 Toast.makeText(this, "Fix form errors.", Toast.LENGTH_LONG)
                         .show();
             }
         } else {
-            Toast.makeText(this, "Signup error", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "General error.", Toast.LENGTH_LONG).show();
         }
+    }
+
+    private void doneSavingUser() {
+        mDialog.dismiss();
+        Toast.makeText(DocCreateEditProfileActivity.this, "User " + ((isCreate) ?
+                "created!" : "saved!"), Toast.LENGTH_SHORT).show();
+        finish();
     }
 
     /**
@@ -278,7 +273,7 @@ public class DocCreateEditProfileActivity extends Activity {
     private boolean hasErrors() {
         boolean a = true;
         // User
-        a = a && isEmailValid;
+        a = a && (isCreate) ? isEmailValid : true;
         // Others
         for (int i = 1; i < N_OF_FIELDS; i++) {
             boolean b = isFieldValid(i);

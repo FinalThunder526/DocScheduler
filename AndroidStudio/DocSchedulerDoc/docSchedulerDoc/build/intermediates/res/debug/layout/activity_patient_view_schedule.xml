@@ -26,5 +26,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></ListView>
 
+    <Button
+        android:id="@+id/patWeeklySchedule"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:onClick="viewWeeklySched"
+        android:text="@string/patient_view_weekly_sched"/>
+
 </LinearLayout>
 <!-- From: file:/C:/Users/Sarang/Documents/GitHub/DocScheduler/AndroidStudio/DocSchedulerDoc/docSchedulerDoc/src/main/res/layout/activity_patient_view_schedule.xml -->

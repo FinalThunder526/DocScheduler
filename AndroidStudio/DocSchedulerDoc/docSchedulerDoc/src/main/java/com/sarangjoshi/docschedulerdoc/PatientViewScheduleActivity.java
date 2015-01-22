@@ -2,6 +2,7 @@ package com.sarangjoshi.docschedulerdoc;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -52,6 +53,9 @@ public class PatientViewScheduleActivity extends Activity {
         loadDoctor();
     }
 
+    /**
+     * Loads the Doctor object.
+     */
     private void loadDoctor() {
         Data.d = ProgressDialog.show(this, "", "Loading...");
         ParseQuery<ParseUser> query = ParseUser.getQuery();
@@ -126,7 +130,7 @@ public class PatientViewScheduleActivity extends Activity {
         placeList.clear();
 
         // Goes through all the places and sees if any are today
-        today = DayTime.getStringFromInt(Calendar.getInstance().get(Calendar.DAY_OF_WEEK));
+        today = DayTime.getDayFromInt(Calendar.getInstance().get(Calendar.DAY_OF_WEEK));
         for (Place p : mSchedule.getPlaces()) {
             for (DayTime t : p.getDayTimes()) {
                 if (t.getDay().equals(today)) {
@@ -179,5 +183,15 @@ public class PatientViewScheduleActivity extends Activity {
                 Data.d.dismiss();
             }
         });
+    }
+
+    public void viewWeeklySched(View v) {
+        Intent intent = new Intent(this, PatientViewWeeklyScheduleActivity.class);
+        ArrayList<String> placesAsStrings = new ArrayList<String>();
+        for(Place p : mSchedule.getPlaces()) {
+            placesAsStrings.add(p.getAsString());
+        }
+        intent.putStringArrayListExtra(Schedule.PLACES_AS_STRINGS_KEY, placesAsStrings);
+        startActivity(intent);
     }
 }

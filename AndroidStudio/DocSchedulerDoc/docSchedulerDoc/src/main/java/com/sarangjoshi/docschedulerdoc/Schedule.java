@@ -16,6 +16,7 @@ import com.parse.*;
 public class Schedule {
     public static final String PLACES_KEY = "places";
     public static final String SCHEDULE_OBJECT_KEY = "Schedule";
+    public static final String PLACES_AS_STRINGS_KEY = "places-as-strings";
 
     private List<Place> mPlaces;
     private final Context mContext;
@@ -76,7 +77,7 @@ public class Schedule {
     /**
      * Saves the newly created Places to the server.
      */
-    private void savePlaces() {
+    private void savePlaces() /**/{
         // Creates a list of newly created Place ParseObjects
         final List<ParseObject> parsePlaces = new ArrayList<ParseObject>();
         for (Place p : mPlaces) {

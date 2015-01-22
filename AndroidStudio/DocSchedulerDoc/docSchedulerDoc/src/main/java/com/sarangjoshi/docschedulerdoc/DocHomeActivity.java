@@ -144,7 +144,7 @@ public class DocHomeActivity extends FragmentActivity implements Schedule.SaveTo
         todaysPlaces.clear();
 
         // Goes through all the places and sees if any are today
-        today = DayTime.getStringFromInt(Calendar.getInstance().get(Calendar.DAY_OF_WEEK));
+        today = DayTime.getDayFromInt(Calendar.getInstance().get(Calendar.DAY_OF_WEEK));
         for (Place p : mSchedule.getPlaces()) {
             for (DayTime t : p.getDayTimes()) {
                 if (t.getDay().equals(today)) {

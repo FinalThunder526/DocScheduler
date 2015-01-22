@@ -5,7 +5,7 @@
     <string name="home_name">Home</string>
     <string name="edit_sched_name">Weekly Schedule</string>
     <string name="edit_place_name">Edit Place</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="patient_view_weekly_sched">View Weekly Schedule</string>
     <string name="action_settings">Settings</string>
     <string name="facebook_app_id">1536310793281170</string>
     <string name="facebook_login">Facebook Login</string>
@@ -25,12 +25,12 @@
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="refresh">Refresh</string>
-
     <string name="title_activity_patient_home">Patient Home</string>
     <string name="title_activity_patient_view_schedule">Doctor Schedule</string>
     <string name="default_update">No update.</string>
     <string name="default_doctor_name">Doctor Name</string>
     <string name="switch_to_doctor">Doctor View</string>
     <string name="edit_profile">Edit Profile</string>
+    <string name="title_activity_patient_view_weekly_schedule">Patient View Weekly Schedule</string>
 
 </resources>

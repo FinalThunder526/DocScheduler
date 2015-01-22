@@ -83,6 +83,24 @@ public class Place {
 				+ (mDayTimes.size() == 1 ? "" : "s") + " a week";
 	}
 
+    public boolean sortDayTimes() {
+        
+        return false;
+    }
+
+    /**
+     * Converts this Place into a string.
+     * Name:DayTime;DayTime;DayTime;
+     * @return
+     */
+    public String getAsString() {
+        String s = getName() + ":";
+        for(DayTime t : mDayTimes) {
+            s += t.toString() + ";";
+        }
+        return s;
+    }
+
 	/**
 	 * Converts this Place object to a Parse Object of type
 	 * {@link Place#PLACE_OBJECT_KEY}.
@@ -117,4 +135,23 @@ public class Place {
 			addDayTime(t);
 		}
 	}
+
+    /**
+     * Constructs a Place from the given concise string.
+     * @param s
+     */
+    public static Place construct(String s) {
+        Place place = new Place();
+        try {
+            place.setName(s.substring(0, s.indexOf(':')));
+            s = s.substring(s.indexOf(':') + 1);
+            String[] dayTimes = s.split(";");
+            for (String dt : dayTimes) {
+                place.addDayTime(new DayTime(dt));
+            }
+            return place;
+        } catch (Exception e) {
+            return null;
+        }
+    }
 }

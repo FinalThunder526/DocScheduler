@@ -17,7 +17,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
         <activity
             android:name="com.facebook.LoginActivity"
             android:label="@string/facebook_login" />
@@ -26,7 +26,7 @@
             android:label="@string/app_name" />
         <activity
             android:name=".DocHomeActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -39,7 +39,7 @@
         <activity
             android:name=".DocEditScheduleActivity"
             android:label="@string/edit_sched_name"
-            android:parentActivityName=".DocHomeActivity">
+            android:parentActivityName=".DocHomeActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".DocHomeActivity" />
@@ -47,7 +47,7 @@
         <activity
             android:name=".DocEditPlaceActivity"
             android:label="@string/edit_place_name"
-            android:parentActivityName=".DocEditScheduleActivity">
+            android:parentActivityName=".DocEditScheduleActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.sarangjoshi.docschedulerdoc.DocEditScheduleActivity" />
@@ -59,14 +59,22 @@
 
         <activity
             android:name=".PatientHomeActivity"
-            android:label="@string/title_activity_patient_home"></activity>
+            android:label="@string/title_activity_patient_home" />
         <activity
             android:name=".PatientViewScheduleActivity"
             android:label="@string/title_activity_patient_view_schedule"
-            android:parentActivityName=".PatientHomeActivity">
+            android:parentActivityName=".PatientHomeActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.sarangjoshi.docschedulerdoc.DocEditScheduleActivity" />
+        </activity>
+        <activity
+            android:name=".PatientViewWeeklyScheduleActivity"
+            android:label="@string/title_activity_patient_view_weekly_schedule"
+            android:parentActivityName=".PatientViewScheduleActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sarangjoshi.docschedulerdoc.PatientViewScheduleActivity" />
         </activity>
     </application>
 

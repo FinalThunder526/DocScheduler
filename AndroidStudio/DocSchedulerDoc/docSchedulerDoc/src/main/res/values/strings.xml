@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Doc Scheduler Doc</string>
+    <string name="app_name">Real Time Scheduler</string>
     <string name="home_name">Home</string>
     <string name="edit_sched_name">Weekly Schedule</string>
     <string name="edit_place_name">Edit Place</string>
@@ -31,6 +31,19 @@
     <string name="default_doctor_name">Doctor Name</string>
     <string name="switch_to_doctor">Doctor View</string>
     <string name="edit_profile">Edit Profile</string>
-    <string name="title_activity_patient_view_weekly_schedule">Patient View Weekly Schedule</string>
+    <string name="title_activity_patient_view_weekly_schedule">Weekly Schedule</string>
+    <string name="create_profile">Create Profile</string>
+    <string name="cancel">Cancel</string>
+    <string name="see_weekly_schedule">See Weekly Schedule</string>
+    <string name="empty_schedule">Schedule empty today!</string>
+    <string name="logout">Logout</string>
+    <string name="post_update">Post Update</string>
+    <string name="today_title">Today\'s Schedule</string>
+    <string name="no_update">No update</string>
+    <string name="not_logged_in">Error, not logged in</string>
+    <string name="today_update">Today\'s Update</string>
+    <string name="schedule_update_title">Schedule Update</string>
+    <string name="schedule_update_text">Enter update for today:</string>
+    <string name="switch_to_patient">Switch to Patient</string>
 
 </resources>

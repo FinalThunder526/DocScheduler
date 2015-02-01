@@ -141,3 +141,11 @@ ADDED from AndroidManifest.xml:63:9
 		ADDED from AndroidManifest.xml:66:13
 	android:name
 		ADDED from AndroidManifest.xml:64:13
+activity#com.sarangjoshi.docschedulerdoc.PatientViewWeeklyScheduleActivity
+ADDED from AndroidManifest.xml:71:9
+	android:label
+		ADDED from AndroidManifest.xml:73:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:74:13
+	android:name
+		ADDED from AndroidManifest.xml:72:13

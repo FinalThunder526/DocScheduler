@@ -1,0 +1,30 @@
+x 1. The title of the app right now is "Doc scheduler Doc". Change it to "Real time Scheduler".
+
+x 2. In "Signup" screen add a "Cancel" button. Right now I am forced to complete the process of profile creation.
+
+x 3. After logging in, the screen looks a little cluttered and disorganized. I recommend the following structure:
+
+User logged in: <full name>
+<update>
+Button <Post schedule update>
+
+Today's Schedule
+<place 1: time>
+<place 2: time>
+...
+
+Button <See Weekly Schedule>
+
+Button <Logout>         Button <Edit profile>
+
+x 4. For "Edit profile" provide a "Cancel" button since I may not change anything.
+
+x 5. For "Post update" screen, the tile is "Save update". Instead use "Schedule update".
+Next line says "Save update for today". Instead say "Enter update for today".
+
+x 6. In the main doctor screen, move the "Switch to patient" button further down to show it separate.
+
+x 7. In Patient app, when a doctor is selected, 
+- Mention update as "Today's update: <update>"
+- Show today's schedule under the title "Today's schedule".
+- Provide a button <Show weekly schedule> in which show the entire week's schedule in the format mentioned in an earlier email.

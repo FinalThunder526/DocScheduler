@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:isScrollContainer="true"
+    android:padding="@dimen/activity_margin"
     android:orientation="vertical">
 
     <TextView
@@ -131,11 +132,23 @@
                 android:layout_height="wrap_content"
                 android:text="@string/public_info" />
 
-            <Button
-                android:id="@+id/createProfileBtn"
-                android:layout_width="wrap_content"
+            <LinearLayout
                 android:layout_height="wrap_content"
-                android:text="Create Profile" />
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/createProfileBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/create_profile" />
+                <Button
+                    android:id="@+id/cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="cancelCreateEdit"
+                    android:text="@string/cancel"
+                    />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

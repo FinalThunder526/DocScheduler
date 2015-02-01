@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ExpandableListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -12,7 +13,8 @@ public class PatientViewWeeklyScheduleActivity extends ActionBarActivity {
     ExpandableListView weeklyScheduleListView;
     ExpandablePlaceListAdapter weeklyScheduleListAdapter;
 
-    private String mDoctorId;
+    private TextView doctorName;
+
     private Schedule mSchedule;
 
     @Override
@@ -21,6 +23,9 @@ public class PatientViewWeeklyScheduleActivity extends ActionBarActivity {
         setContentView(R.layout.activity_patient_view_weekly_schedule);
 
         mSchedule = new Schedule(this, true);
+        doctorName = (TextView) findViewById(R.id.patDoctorName);
+
+        doctorName.setText(getIntent().getStringExtra(PatientHomeActivity.DOC_NAME));
 
         ArrayList<String> placesAsStrings = getIntent().getStringArrayListExtra(Schedule.PLACES_AS_STRINGS_KEY);
         for(String placeAsString : placesAsStrings) {

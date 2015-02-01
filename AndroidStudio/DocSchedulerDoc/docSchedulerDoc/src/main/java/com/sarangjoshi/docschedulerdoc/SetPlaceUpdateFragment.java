@@ -9,7 +9,6 @@ import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 
 public class SetPlaceUpdateFragment extends DialogFragment {
     private PlaceUpdateDialogListener mListener;
@@ -56,7 +55,7 @@ public class SetPlaceUpdateFragment extends DialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        View v = inflater.inflate(R.layout.dialog_placeupdate, null);
+        View v = inflater.inflate(R.layout.dialog_scheduleupdate, null);
         updateEdit = (EditText) v.findViewById(R.id.dialog_update);
 
         if (update == null || update.trim().equals(""))
@@ -68,7 +67,7 @@ public class SetPlaceUpdateFragment extends DialogFragment {
 
         updateEdit.requestFocus();
 
-        builder.setTitle("Save update")
+        builder.setTitle(getResources().getString(R.string.schedule_update_title))
                 .setView(v)
                 .setPositiveButton("Save", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {

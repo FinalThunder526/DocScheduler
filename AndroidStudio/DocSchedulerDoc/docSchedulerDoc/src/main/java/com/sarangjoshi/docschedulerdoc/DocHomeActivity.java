@@ -65,7 +65,7 @@ public class DocHomeActivity extends FragmentActivity implements Schedule.SaveTo
             setContentView(R.layout.activity_doc_home);
 
             userView = (TextView) findViewById(R.id.userText);
-            userView.setText("Logged in as: " + user.getUsername());
+            userView.setText("User logged in: " + user.getUsername());
 
             logoutBtn = (Button) findViewById(R.id.logoutBtn);
             saveUpdateBtn = (Button) findViewById(R.id.saveUpdateBtn);

@@ -1,122 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:padding="@dimen/activity_margin">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/userText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Error, not logged in" />
+            android:text="@string/not_logged_in"
+            android:paddingBottom="8dp" />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/valid_green"
+                android:textSize="18sp"
+                android:hint="@string/no_update"
+                android:id="@+id/updateEdit" />
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/updateProgressBar"
+                android:visibility="gone" />
+        </LinearLayout>
 
         <Button
-            android:id="@+id/logoutBtn"
+            android:id="@+id/saveUpdateBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="logout"
-            android:text="Logout" />
-
-        <Button android:id="@+id/editProfile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="editProfile"
-            android:text="@string/edit_profile"/>
-
-    </LinearLayout>
-
-    <!--
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <EditText
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="5"
-            android:id="@+id/updateText"
-            android:layout_gravity="bottom"
-            android:hint="Set update" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="2"
-            android:layout_height="wrap_content"
-            android:id="@+id/saveUpdate"
-            android:text="Save Update" />
-
-    </LinearLayout> -->
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Select a location to post a real-time update." />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+            android:text="@string/post_update" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TODAY'S SCHEDULE"
-            android:textSize="32dp"
+            android:text="@string/today_title"
+            android:textSize="32sp"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Schedule empty today!"
+            android:text="@string/empty_schedule"
             android:id="@+id/todayEmptyText"
             android:visibility="gone" />
 
         <ListView
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
-            android:id="@+id/todayList"></ListView>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="0dp"
-            android:layout_weight="3"
-            android:hint="No update"
-            android:id="@+id/updateEdit" />
-
-        <ProgressBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/updateProgressBar"
-            android:visibility="gone" />
+            android:id="@+id/todayList" />
 
         <Button
-            android:id="@+id/saveUpdateBtn"
-            android:layout_width="0dp"
+            android:id="@+id/editSchedBtn"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:onClick="saveUpdate"
-            android:text="Post Update" />
+            android:onClick="editSched"
+            android:text="@string/see_weekly_schedule" />
     </LinearLayout>
 
     <Button
-        android:id="@+id/editSchedBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/logoutBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="editSched"
-        android:text="See Weekly Schedule" />
+        android:onClick="logout"
+        android:text="@string/logout" />
 
-
-</LinearLayout>
+    <Button
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/editProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="editProfile"
+        android:text="@string/edit_profile" />
+</RelativeLayout>

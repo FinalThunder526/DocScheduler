@@ -21,6 +21,7 @@ import java.util.*;
 
 public class PatientHomeActivity extends Activity {
     public static final String DOC_ID = "doc-id";
+    public static final String DOC_NAME = "doc-name";
 
     private ListView doctorsList;
     private ArrayAdapter<String> adapter;

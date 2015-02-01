@@ -133,7 +133,7 @@ public class DocCreateEditProfileActivity extends Activity {
             email.setEnabled(false);
             password.setEnabled(false);
             publicInfoBox.setChecked(true);
-            publicInfoBox.setVisibility(View.INVISIBLE);
+            publicInfoBox.setVisibility(View.GONE);
             createProfileBtn.setText("Save Profile");
 
             // Fill in existing data
@@ -310,5 +310,13 @@ public class DocCreateEditProfileActivity extends Activity {
 
     private String getText(EditText e) {
         return e.getText().toString();
+    }
+
+    /**
+     * Cancel editing/creating profile.
+     * @param v
+     */
+    public void cancelCreateEdit(View v) {
+        finish();
     }
 }

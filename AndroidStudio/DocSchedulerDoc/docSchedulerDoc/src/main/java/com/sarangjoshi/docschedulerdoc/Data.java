@@ -20,6 +20,14 @@ public class Data {
         mPref = mContext.getSharedPreferences("pref", Context.MODE_PRIVATE);
     }
 
+    public boolean saveCurrentDoctor(String docId) {
+        return mPref.edit().putString("current-doctor", docId).commit();
+    }
+
+    public String getCurrentDoctor() {
+        return mPref.getString("current-doctor", null);
+    }
+
     public boolean saveIsPatientMode(boolean isPatientMode) {
         return mPref.edit().putBoolean("patient", isPatientMode).commit();
     }

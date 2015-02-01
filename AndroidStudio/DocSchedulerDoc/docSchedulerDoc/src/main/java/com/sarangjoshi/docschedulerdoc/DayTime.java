@@ -11,7 +11,7 @@ package com.sarangjoshi.docschedulerdoc;
  *
  * @author Sarang
  */
-public class DayTime {
+public class DayTime implements Comparable<DayTime> {
     private String mDay;
     private int mStartHour;
     private int mStartMin;
@@ -130,6 +130,45 @@ public class DayTime {
                 return "Saturday";
             default:
                 return "ERROR";
+        }
+    }
+
+    public static int getIntFromDay(String s) {
+        switch (s) {
+            case "Sunday":
+                return 1;
+            case "Monday":
+                return 2;
+            case "Tuesday":
+                return 3;
+            case "Wednesday":
+                return 4;
+            case "Thursday":
+                return 5;
+            case "Friday":
+                return 6;
+            case "Saturday":
+                return 7;
+            default:
+                return -1;
+        }
+    }
+
+    // this - other
+    @Override
+    public int compareTo(DayTime other) {
+        int dayDifference = DayTime.getIntFromDay(mDay) - DayTime.getIntFromDay(other.mDay);
+        if (dayDifference != 0)
+            return dayDifference;
+        else {
+            int startDifference = (mStartHour * 60 + mStartMin)
+                    - (other.mStartHour * 60 + other.mStartMin);
+            if (startDifference != 0) {
+                return startDifference;
+            } else {
+                return (mEndHour * 60 + mEndMin)
+                        - (other.mEndHour * 60 + other.mEndMin);
+            }
         }
     }
 }

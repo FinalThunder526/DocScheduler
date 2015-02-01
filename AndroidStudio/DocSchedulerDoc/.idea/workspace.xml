@@ -18,22 +18,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b09bcda-1186-4432-8bb8-b22e34e67fb7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/model_data.bin" afterPath="$PROJECT_DIR$/build/intermediates/model_data.bin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/values/colors.xml" />
+      <change type="DELETED" beforePath="C:\Users\Sarang\Documents\GitHub\DocScheduler\AndroidStudio\DocSchedulerDoc\.idea\libraries\Parse_1_7_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sarang\Documents\GitHub\DocScheduler\AndroidStudio\DocSchedulerDoc\.idea\libraries\appcompat_v7_19_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sarang\Documents\GitHub\DocScheduler\AndroidStudio\DocSchedulerDoc\.idea\libraries\aws_android_sdk_2_1_5_cognito.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sarang\Documents\GitHub\DocScheduler\AndroidStudio\DocSchedulerDoc\.idea\libraries\aws_android_sdk_2_1_5_core.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sarang\Documents\GitHub\DocScheduler\AndroidStudio\DocSchedulerDoc\.idea\libraries\bolts_android_1_1_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sarang\Documents\GitHub\DocScheduler\AndroidStudio\DocSchedulerDoc\.idea\libraries\support_annotations_21_0_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sarang\Documents\GitHub\DocScheduler\AndroidStudio\DocSchedulerDoc\.idea\libraries\support_v4_18_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sarang\Documents\GitHub\DocScheduler\AndroidStudio\DocSchedulerDoc\.idea\libraries\support_v4_21_0_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sarang\Documents\GitHub\DocScheduler\AndroidStudio\DocSchedulerDoc\docSchedulerDoc\src\main\res\values\values.xml" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\Sarang\Documents\GitHub\DocScheduler\AndroidStudio\DocSchedulerDoc\docSchedulerDoc\src\main\res\layout\dialog_placeupdate.xml" afterPath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/dialog_scheduleupdate.xml" />
+      <change type="MODIFICATION" beforePath="C:\Users\Sarang\Documents\GitHub\DocScheduler\AndroidStudio\DocSchedulerDoc\build\intermediates\model_data.bin" afterPath="C:\Users\Sarang\Documents\GitHub\DocScheduler\AndroidStudio\DocSchedulerDoc\build\intermediates\model_data.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/build/generated/source/buildConfig/debug/com/sarangjoshi/docschedulerdoc/BuildConfig.java" afterPath="$PROJECT_DIR$/docSchedulerDoc/build/generated/source/buildConfig/debug/com/sarangjoshi/docschedulerdoc/BuildConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/build/generated/source/buildConfig/release/com/sarangjoshi/docschedulerdoc/BuildConfig.java" afterPath="$PROJECT_DIR$/docSchedulerDoc/build/generated/source/buildConfig/release/com/sarangjoshi/docschedulerdoc/BuildConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/build/generated/source/buildConfig/test/debug/com/sarangjoshi/docschedulerdoc/test/BuildConfig.java" afterPath="$PROJECT_DIR$/docSchedulerDoc/build/generated/source/buildConfig/test/debug/com/sarangjoshi/docschedulerdoc/test/BuildConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/Data.java" afterPath="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/Data.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/DayTime.java" afterPath="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/DayTime.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/DocCreateEditProfileActivity.java" afterPath="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/DocCreateEditProfileActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/DocHomeActivity.java" afterPath="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/DocHomeActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/PatientHomeActivity.java" afterPath="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/PatientHomeActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/PatientViewScheduleActivity.java" afterPath="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/PatientViewScheduleActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/PatientViewWeeklyScheduleActivity.java" afterPath="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/PatientViewWeeklyScheduleActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/Place.java" afterPath="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/Place.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/docSchedulerDoc/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/build/generated/source/r/debug/com/facebook/android/R.java" afterPath="$PROJECT_DIR$/docSchedulerDoc/build/generated/source/r/debug/com/facebook/android/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/build/generated/source/r/debug/com/sarangjoshi/docschedulerdoc/R.java" afterPath="$PROJECT_DIR$/docSchedulerDoc/build/generated/source/r/debug/com/sarangjoshi/docschedulerdoc/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/build/generated/source/r/release/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/docSchedulerDoc/build/generated/source/r/release/android/support/v7/appcompat/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/build/generated/source/r/release/com/facebook/android/R.java" afterPath="$PROJECT_DIR$/docSchedulerDoc/build/generated/source/r/release/com/facebook/android/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/build/generated/source/r/release/com/sarangjoshi/docschedulerdoc/R.java" afterPath="$PROJECT_DIR$/docSchedulerDoc/build/generated/source/r/release/com/sarangjoshi/docschedulerdoc/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/SetPlaceUpdateFragment.java" afterPath="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/SetPlaceUpdateFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_doc_createedit_profile.xml" afterPath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_doc_createedit_profile.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_doc_editplace.xml" afterPath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_doc_editplace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_doc_editschedule.xml" afterPath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_doc_editschedule.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_doc_home.xml" afterPath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_doc_home.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_patient_home.xml" afterPath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_patient_home.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_patient_view_schedule.xml" afterPath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_patient_view_schedule.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_patient_view_weekly_schedule.xml" afterPath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_patient_view_weekly_schedule.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/build.gradle" afterPath="$PROJECT_DIR$/docSchedulerDoc/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/menu/menu_patient_home.xml" afterPath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/menu/menu_patient_home.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/values/dimens.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/values-w820dp/dimens.xml" afterPath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/values-w820dp/dimens.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/layout_weeklysched_group.xml" afterPath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/layout_weeklysched_group.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/layout_weeklysched_item.xml" afterPath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/layout_weeklysched_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../APKs/manifest-merger-release-report.txt" afterPath="$PROJECT_DIR$/../../APKs/manifest-merger-release-report.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/docSchedulerDoc/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="C:\Users\Sarang\Documents\GitHub\DocScheduler\AndroidStudio\DocSchedulerDoc\.idea\workspace.xml" afterPath="C:\Users\Sarang\Documents\GitHub\DocScheduler\AndroidStudio\DocSchedulerDoc\.idea\workspace.xml" />
     </list>
     <ignored path="DocSchedulerDoc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,115 +86,94 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DocHomeActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/DocHomeActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1216" max-vertical-offset="2040">
-              <caret line="308" column="0" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
-              <folding>
-                <element signature="method#onCreate#0;class#DocHomeActivity#0" expanded="false" />
-                <element signature="docComment;method#retrieveSchedule#0;class#DocHomeActivity#0" expanded="false" />
-                <element signature="method#retrieveSchedule#0;class#DocHomeActivity#0" expanded="false" />
-                <element signature="docComment;method#initSchedule#0;class#DocHomeActivity#0" expanded="false" />
-                <element signature="method#initSchedule#0;class#DocHomeActivity#0" expanded="false" />
-                <element signature="docComment;method#loadToday#0;class#DocHomeActivity#0" expanded="false" />
-                <element signature="method#loadToday#0;class#DocHomeActivity#0" expanded="false" />
-                <element signature="docComment;method#getUpdateObj#0;class#DocHomeActivity#0" expanded="false" />
-                <element signature="method#getUpdateObj#0;class#DocHomeActivity#0" expanded="false" />
-                <element signature="docComment;method#saveUpdate#0;class#DocHomeActivity#0" expanded="false" />
-                <element signature="method#saveUpdate#0;class#DocHomeActivity#0" expanded="false" />
-                <element signature="docComment;method#saveUpdateToDoctor#0;class#DocHomeActivity#0" expanded="false" />
-                <element signature="method#saveUpdateToDoctor#0;class#DocHomeActivity#0" expanded="false" />
-                <element signature="method#doneSavingUpdate#0;class#DocHomeActivity#0" expanded="false" />
-                <element signature="docComment;method#updateViewsLocal#0;class#DocHomeActivity#0" expanded="false" />
-                <element signature="method#updateViewsLocal#0;class#DocHomeActivity#0" expanded="false" />
-                <element signature="method#onCreateOptionsMenu#0;class#DocHomeActivity#0" expanded="false" />
-                <element signature="method#onOptionsItemSelected#0;class#DocHomeActivity#0" expanded="false" />
-                <element signature="docComment;method#logout#0;class#DocHomeActivity#0" expanded="false" />
-                <element signature="docComment;method#editSched#0;class#DocHomeActivity#0" expanded="false" />
-                <element signature="method#editSched#0;class#DocHomeActivity#0" expanded="false" />
-                <element signature="method#onActivityResult#0;class#DocHomeActivity#0" expanded="false" />
-                <element signature="method#onSaveCompleted#0;class#DocHomeActivity#0" expanded="false" />
-                <element signature="method#onDialogPositiveClick#0;class#DocHomeActivity#0" expanded="false" />
-                <element signature="docComment;method#closeKeyboard#0;class#DocHomeActivity#0" expanded="false" />
-                <element signature="method#closeKeyboard#0;class#DocHomeActivity#0" expanded="false" />
-                <element signature="docComment;method#getSchedule#0;class#DocHomeActivity#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PatientHomeActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/PatientHomeActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="635" max-vertical-offset="1394">
-              <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="1785">
+              <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_doc_home.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_doc_home.xml">
+      <file leaf-file-name="activity_patient_view_schedule.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_patient_view_schedule.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="867">
+              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="14" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
           <provider editor-type-id="android-designer">
             <state />
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PatientViewWeeklyScheduleActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/PatientViewWeeklyScheduleActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.62963" vertical-offset="0" max-vertical-offset="2159">
-              <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1156">
+              <caret line="27" column="82" selection-start-line="27" selection-start-column="82" selection-end-line="27" selection-end-column="82" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DocCreateEditProfileActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/DocCreateEditProfileActivity.java">
+      <file leaf-file-name="layout_weeklysched_group.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/layout_weeklysched_group.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33236152" vertical-offset="4340" max-vertical-offset="5440">
-              <caret line="262" column="0" selection-start-line="262" selection-start-column="0" selection-end-line="262" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="imports" expanded="true" />
-                <element signature="e#2052#2198#0" expanded="true" />
-                <element signature="e#2187#2188#0" expanded="true" />
-                <element signature="e#2407#2947#0" expanded="true" />
-                <element signature="e#2936#2937#0" expanded="true" />
-                <element signature="e#6213#6592#0" expanded="true" />
-                <element signature="e#6577#6578#0" expanded="true" />
-                <element signature="e#8020#8477#0" expanded="true" />
-                <element signature="e#8454#8455#0" expanded="true" />
-                <element signature="e#8543#8998#0" expanded="true" />
-                <element signature="e#8975#8976#0" expanded="true" />
-                <element signature="e#10868#10869#0" expanded="true" />
-                <element signature="e#10913#10914#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="340">
+              <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout_weeklysched_item.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/layout_weeklysched_item.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="323">
+              <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PatientViewScheduleActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/PatientViewScheduleActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3621" max-vertical-offset="3791">
+              <caret line="213" column="76" selection-start-line="213" selection-start-column="76" selection-end-line="213" selection-end-column="76" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_doc_createedit_profile.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_doc_createedit_profile.xml">
+      <file leaf-file-name="activity_patient_view_weekly_schedule.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_patient_view_weekly_schedule.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="459">
+              <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
           <provider editor-type-id="android-designer">
             <state />
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docSchedulerDoc/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.4444447" vertical-offset="336" max-vertical-offset="1207">
-              <caret line="36" column="58" selection-start-line="36" selection-start-column="58" selection-end-line="36" selection-end-column="58" />
-              <folding>
-                <element signature="tag#TextView#0;tag#LinearLayout#0" expanded="false" />
-                <element signature="tag#LinearLayout#0;tag#LinearLayout#0;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
-                <element signature="tag#ProgressBar#0;tag#LinearLayout#0;tag#LinearLayout#0;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
-                <element signature="tag#EditText#1;tag#LinearLayout#0;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
-                <element signature="tag#ImageButton#0;tag#LinearLayout#1;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
-                <element signature="tag#LinearLayout#0;tag#LinearLayout#1;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
-                <element signature="tag#EditText#0;tag#LinearLayout#0;tag#LinearLayout#1;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
-                <element signature="tag#EditText#1;tag#LinearLayout#0;tag#LinearLayout#1;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
-                <element signature="tag#TextView#0;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
-                <element signature="tag#EditText#0;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
-                <element signature="tag#EditText#1;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
-                <element signature="tag#EditText#2;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
-                <element signature="tag#CheckBox#0;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.58318424" vertical-offset="31" max-vertical-offset="612">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1053,7 +1062,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="5679320221600" />
+        <entry key="$PROJECT_DIR$" value="5680535882516" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1190,31 +1199,48 @@
         <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/SignupActivity.java" />
         <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/CreateEditProfileActivity.java" />
         <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_editschedule.xml" />
-        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/DayTime.java" />
         <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/menu/menu_home.xml" />
         <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/EditScheduleActivity.java" />
         <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/dialog_placeupdate.xml" />
-        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/SetPlaceUpdateFragment.java" />
         <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_home.xml" />
         <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/HomeActivity.java" />
         <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_loginhome.xml" />
         <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/LoginActivity.java" />
-        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_patient_home.xml" />
         <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/StaticData.java" />
-        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/Schedule.java" />
-        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/Data.java" />
         <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/MainActivity.java" />
-        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/PatientHomeActivity.java" />
         <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_patient_view_schedule.xml" />
-        <option value="$PROJECT_DIR$/docSchedulerDoc/build.gradle" />
-        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/PatientViewScheduleActivity.java" />
         <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/menu/menu_patient_home.xml" />
-        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_doc_home.xml" />
-        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_doc_createedit_profile.xml" />
-        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/DocHomeActivity.java" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/layout_weekly_place.xml" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/layout_group.xml" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/layout_item.xml" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/ExpandableListAdapter.java" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/ExpandablePlaceListAdapter.java" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/Schedule.java" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/DayTime.java" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/Place.java" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/Data.java" />
         <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/DocCreateEditProfileActivity.java" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/DocHomeActivity.java" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/values/values.xml" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_doc_home.xml" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_doc_editschedule.xml" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_doc_editplace.xml" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_doc_createedit_profile.xml" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_patient_home.xml" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/values/dimens.xml" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/SetPlaceUpdateFragment.java" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/dialog_scheduleupdate.xml" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_patient_view_schedule.xml" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/PatientViewWeeklyScheduleActivity.java" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/PatientHomeActivity.java" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/PatientViewScheduleActivity.java" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/layout_weeklysched_group.xml" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/layout_weeklysched_item.xml" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_patient_view_weekly_schedule.xml" />
+        <option value="$PROJECT_DIR$/docSchedulerDoc/build.gradle" />
       </list>
     </option>
   </component>
@@ -1270,7 +1296,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1377,6 +1402,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DocSchedulerDoc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DocSchedulerDoc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docSchedulerDoc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="layout" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1411,237 +1466,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DocSchedulerDoc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DocSchedulerDoc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docSchedulerDoc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DocSchedulerDoc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DocSchedulerDoc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docSchedulerDoc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generated" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="source" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DocSchedulerDoc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DocSchedulerDoc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docSchedulerDoc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generated" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="source" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DocSchedulerDoc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DocSchedulerDoc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docSchedulerDoc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generated" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="source" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="debug" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docschedulerdoc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DocSchedulerDoc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DocSchedulerDoc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docSchedulerDoc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generated" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="source" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="debug" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DocSchedulerDoc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DocSchedulerDoc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docSchedulerDoc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generated" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="source" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="debug" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DocSchedulerDoc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DocSchedulerDoc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docSchedulerDoc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="generated" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DocSchedulerDoc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DocSchedulerDoc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="intermediates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1659,7 +1487,7 @@
     <property name="ExportApk.Flavors" value="" />
     <property name="ExportApk.BuildType" value="release" />
     <property name="FullScreen" value="false" />
-    <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.SHOW" value="false" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.SHOW" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager2.SHOW" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
@@ -1669,6 +1497,7 @@
       <recent name="com.sarangjoshi.docschedulerdoc" />
     </key>
     <key name="android.template.parentActivityClass">
+      <recent name="com.sarangjoshi.docschedulerdoc.PatientViewScheduleActivity" />
       <recent name="" />
     </key>
   </component>
@@ -1894,23 +1723,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44463372" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36797273" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41226575" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4616695" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19591528" sideWeight="0.5012658" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270869" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4616695" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1918,15 +1744,49 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27685326" sideWeight="0.49873418" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3207262" sideWeight="0.49873418" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30494037" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30323678" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44463372" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4616695" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19591528" sideWeight="0.5012658" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27685326" sideWeight="0.49873418" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30494037" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32879046" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36797273" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270869" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4616695" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1955,12 +1815,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/DocHomeActivity.java</url>
-          <line>206</line>
-          <properties />
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/DocHomeActivity.java</url>
           <line>217</line>
           <properties />
           <option name="timeStamp" value="41" />
@@ -1970,24 +1824,6 @@
           <line>239</line>
           <properties />
           <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/PatientViewScheduleActivity.java</url>
-          <line>125</line>
-          <properties />
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/DocHomeActivity.java</url>
-          <line>308</line>
-          <properties />
-          <option name="timeStamp" value="56" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/DocCreateEditProfileActivity.java</url>
-          <line>130</line>
-          <properties />
-          <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/DocCreateEditProfileActivity.java</url>
@@ -2005,18 +1841,10 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="61" />
+      <option name="time" value="68" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/TimePickerFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="765">
@@ -2035,51 +1863,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
           <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/TimePickerFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="765">
-          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/DocEditPlaceActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="254" max-vertical-offset="884">
-          <caret line="154" column="7" selection-start-line="154" selection-start-column="7" selection-end-line="154" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1258">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/TimePickerFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="765">
-          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/DocEditPlaceActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="254" max-vertical-offset="884">
-          <caret line="154" column="7" selection-start-line="154" selection-start-column="7" selection-end-line="154" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-          <folding />
+          <folding>
+            <element signature="e#791#809#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2111,17 +1897,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_doc_editplace.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1292">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/DocEditPlaceActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3029703" vertical-offset="221" max-vertical-offset="3791">
@@ -2136,64 +1911,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/Place.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="491" max-vertical-offset="884">
-          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/DayTime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="651" max-vertical-offset="1207">
-          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/adt-bundle-windows-x86_64-20140702/adt-bundle-windows-x86_64-20140702/sdk/sources/android-21/java/util/Calendar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17890772" vertical-offset="5634" max-vertical-offset="6766">
           <caret line="1222" column="26" selection-start-line="1222" selection-start-column="18" selection-end-line="1222" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_doc_editschedule.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1343">
-          <caret line="1" column="72" selection-start-line="1" selection-start-column="72" selection-end-line="1" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/SetPlaceUpdateFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="665" max-vertical-offset="1683">
-          <caret line="66" column="39" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_old_login.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/dialog_placeupdate.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="459">
-          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2205,13 +1926,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="559">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="559">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -2254,14 +1968,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="680">
-          <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/DocEditScheduleActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="597" max-vertical-offset="1207">
@@ -2276,57 +1982,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="782">
-          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_patient_home.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="425">
-          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docSchedulerDoc/build/generated/source/r/debug/com/sarangjoshi/docschedulerdoc/R.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3326572" vertical-offset="18570" max-vertical-offset="53312">
           <caret line="1107" column="40" selection-start-line="1107" selection-start-column="32" selection-end-line="1107" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/Schedule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45259392" vertical-offset="308" max-vertical-offset="1071">
-          <caret line="78" column="30" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
-          <folding>
-            <element signature="docComment;method#Schedule#0;class#Schedule#0" expanded="false" />
-            <element signature="method#Schedule#0;class#Schedule#0" expanded="false" />
-            <element signature="docComment;method#addPlace#0;class#Schedule#0" expanded="false" />
-            <element signature="method#addPlace#0;class#Schedule#0" expanded="false" />
-            <element signature="docComment;method#saveToParse#0;class#Schedule#0" expanded="false" />
-            <element signature="method#saveToParse#0;class#Schedule#0" expanded="false" />
-            <element signature="docComment;method#savePlaces#0;class#Schedule#0" expanded="false" />
-            <element signature="method#savePlaces#0;class#Schedule#0" expanded="false" />
-            <element signature="docComment;method#saveSchedule#0;class#Schedule#0" expanded="false" />
-            <element signature="method#saveSchedule#0;class#Schedule#0" expanded="false" />
-            <element signature="docComment;method#addNewPlaces#0;class#Schedule#0" expanded="false" />
-            <element signature="method#addNewPlaces#0;class#Schedule#0" expanded="false" />
-            <element signature="docComment;method#saveUser#0;class#Schedule#0" expanded="false" />
-            <element signature="method#saveUser#0;class#Schedule#0" expanded="false" />
-            <element signature="method#savePlaceId#0;class#Schedule#0" expanded="false" />
-            <element signature="docComment;method#getPlace#1;class#Schedule#0" expanded="false" />
-            <element signature="method#getPlace#1;class#Schedule#0" expanded="false" />
-            <element signature="class#SaveToParseListener#0;class#Schedule#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2342,122 +2001,106 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.3076923" vertical-offset="0" max-vertical-offset="2669">
           <caret line="59" column="53" selection-start-line="59" selection-start-column="53" selection-end-line="59" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/ExpandablePlaceListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5883459" vertical-offset="486" max-vertical-offset="1309">
-          <caret line="47" column="44" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
-          <folding />
+        <state vertical-scroll-proportion="0.21978022" vertical-offset="50" max-vertical-offset="850">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/build.gradle">
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/Schedule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57781756" vertical-offset="0" max-vertical-offset="612">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1088">
+          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/DayTime.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1326">
-          <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1257" max-vertical-offset="2006">
+          <caret line="170" column="13" selection-start-line="170" selection-start-column="13" selection-end-line="170" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/PatientViewScheduleActivity.java">
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/Data.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6690519" vertical-offset="221" max-vertical-offset="2669">
-          <caret line="55" column="61" selection-start-line="55" selection-start-column="61" selection-end-line="55" selection-end-column="61" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="169" max-vertical-offset="697">
+          <caret line="27" column="53" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/Place.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2363" max-vertical-offset="2805">
+          <caret line="166" column="0" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/DocCreateEditProfileActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24950495" vertical-offset="707" max-vertical-offset="1615">
+          <caret line="136" column="47" selection-start-line="136" selection-start-column="47" selection-end-line="136" selection-end-column="47" />
           <folding>
-            <element signature="docComment;class#PatientViewScheduleActivity#0" expanded="false" />
-            <element signature="e#1867#2083#0" expanded="true" />
-            <element signature="e#2071#2072#0" expanded="true" />
-            <element signature="docComment;method#updateViews#0;class#PatientViewScheduleActivity#0" expanded="false" />
-            <element signature="docComment;method#retrieveSchedule#0;class#PatientViewScheduleActivity#0" expanded="false" />
-            <element signature="e#2562#2778#0" expanded="true" />
-            <element signature="e#2763#2764#0" expanded="true" />
-            <element signature="docComment;method#initSchedule#0;class#PatientViewScheduleActivity#0" expanded="false" />
-            <element signature="e#3305#3960#0" expanded="true" />
-            <element signature="e#3941#3942#0" expanded="true" />
-            <element signature="docComment;method#loadToday#0;class#PatientViewScheduleActivity#0" expanded="false" />
-            <element signature="e#4638#4657#0" expanded="false" />
-            <element signature="docComment;method#loadUpdate#0;class#PatientViewScheduleActivity#0" expanded="false" />
-            <element signature="e#5484#6354#0" expanded="true" />
-            <element signature="e#6343#6344#0" expanded="true" />
+            <element signature="method#onCreate#0;class#DocCreateEditProfileActivity#0" expanded="false" />
+            <element signature="e#3034#3102#0" expanded="false" />
+            <element signature="class#EditTextValidListener#0;class#DocCreateEditProfileActivity#0" expanded="false" />
+            <element signature="method#EditTextValidListener#0;class#EditTextValidListener#0;class#DocCreateEditProfileActivity#0" expanded="false" />
+            <element signature="method#onFocusChange#0;class#EditTextValidListener#0;class#DocCreateEditProfileActivity#0" expanded="false" />
+            <element signature="docComment;method#checkIfEmailExists#0;class#DocCreateEditProfileActivity#0" expanded="false" />
+            <element signature="method#checkIfEmailExists#0;class#DocCreateEditProfileActivity#0" expanded="false" />
+            <element signature="docComment;method#fieldValid#0;class#DocCreateEditProfileActivity#0" expanded="false" />
+            <element signature="method#fieldValid#0;class#DocCreateEditProfileActivity#0" expanded="false" />
+            <element signature="docComment;method#save#0;class#DocCreateEditProfileActivity#0" expanded="false" />
+            <element signature="method#save#0;class#DocCreateEditProfileActivity#0" expanded="false" />
+            <element signature="method#doneSavingUser#0;class#DocCreateEditProfileActivity#0" expanded="false" />
+            <element signature="docComment;method#hasErrors#0;class#DocCreateEditProfileActivity#0" expanded="false" />
+            <element signature="method#hasErrors#0;class#DocCreateEditProfileActivity#0" expanded="false" />
+            <element signature="docComment;method#isFieldValid#0;class#DocCreateEditProfileActivity#0" expanded="false" />
+            <element signature="method#isFieldValid#0;class#DocCreateEditProfileActivity#0" expanded="false" />
+            <element signature="method#closeKeyboard#0;class#DocCreateEditProfileActivity#0" expanded="false" />
+            <element signature="docComment;method#cancelCreateEdit#0;class#DocCreateEditProfileActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_patient_view_schedule.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32894737" vertical-offset="63" max-vertical-offset="595">
-          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_doc_createedit_profile.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.4444447" vertical-offset="336" max-vertical-offset="1207">
-          <caret line="36" column="58" selection-start-line="36" selection-start-column="58" selection-end-line="36" selection-end-column="58" />
-          <folding>
-            <element signature="tag#TextView#0;tag#LinearLayout#0" expanded="false" />
-            <element signature="tag#LinearLayout#0;tag#LinearLayout#0;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
-            <element signature="tag#ProgressBar#0;tag#LinearLayout#0;tag#LinearLayout#0;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
-            <element signature="tag#EditText#1;tag#LinearLayout#0;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
-            <element signature="tag#ImageButton#0;tag#LinearLayout#1;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
-            <element signature="tag#LinearLayout#0;tag#LinearLayout#1;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
-            <element signature="tag#EditText#0;tag#LinearLayout#0;tag#LinearLayout#1;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
-            <element signature="tag#EditText#1;tag#LinearLayout#0;tag#LinearLayout#1;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
-            <element signature="tag#TextView#0;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
-            <element signature="tag#EditText#0;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
-            <element signature="tag#EditText#1;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
-            <element signature="tag#EditText#2;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
-            <element signature="tag#CheckBox#0;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_doc_home.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23448277" vertical-offset="0" max-vertical-offset="1615">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+          <folding>
+            <element signature="e#569#592#0" expanded="false" />
+            <element signature="e#1088#1107#0" expanded="false" />
+            <element signature="e#1591#1612#0" expanded="false" />
+            <element signature="e#1757#1778#0" expanded="false" />
+            <element signature="e#1996#2020#0" expanded="false" />
+            <element signature="e#2487#2516#0" expanded="false" />
+            <element signature="e#2826#2842#0" expanded="false" />
+            <element signature="e#3140#3162#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.62963" vertical-offset="0" max-vertical-offset="2159">
-          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/PatientHomeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="635" max-vertical-offset="1394">
-          <caret line="73" column="5" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/DocHomeActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1235" max-vertical-offset="2040">
-          <caret line="308" column="0" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1816" max-vertical-offset="3162">
+          <caret line="239" column="0" selection-start-line="239" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
           <folding>
-            <element signature="method#onCreate#0;class#DocHomeActivity#0" expanded="false" />
+            <element signature="e#2297#2649#0" expanded="true" />
+            <element signature="e#2634#2635#0" expanded="true" />
             <element signature="docComment;method#retrieveSchedule#0;class#DocHomeActivity#0" expanded="false" />
             <element signature="method#retrieveSchedule#0;class#DocHomeActivity#0" expanded="false" />
             <element signature="docComment;method#initSchedule#0;class#DocHomeActivity#0" expanded="false" />
@@ -2467,9 +2110,7 @@
             <element signature="docComment;method#getUpdateObj#0;class#DocHomeActivity#0" expanded="false" />
             <element signature="method#getUpdateObj#0;class#DocHomeActivity#0" expanded="false" />
             <element signature="docComment;method#saveUpdate#0;class#DocHomeActivity#0" expanded="false" />
-            <element signature="method#saveUpdate#0;class#DocHomeActivity#0" expanded="false" />
             <element signature="docComment;method#saveUpdateToDoctor#0;class#DocHomeActivity#0" expanded="false" />
-            <element signature="method#saveUpdateToDoctor#0;class#DocHomeActivity#0" expanded="false" />
             <element signature="method#doneSavingUpdate#0;class#DocHomeActivity#0" expanded="false" />
             <element signature="docComment;method#updateViewsLocal#0;class#DocHomeActivity#0" expanded="false" />
             <element signature="method#updateViewsLocal#0;class#DocHomeActivity#0" expanded="false" />
@@ -2478,9 +2119,8 @@
             <element signature="docComment;method#logout#0;class#DocHomeActivity#0" expanded="false" />
             <element signature="docComment;method#editSched#0;class#DocHomeActivity#0" expanded="false" />
             <element signature="method#editSched#0;class#DocHomeActivity#0" expanded="false" />
-            <element signature="method#onActivityResult#0;class#DocHomeActivity#0" expanded="false" />
+            <element signature="method#editProfile#0;class#DocHomeActivity#0" expanded="false" />
             <element signature="method#onSaveCompleted#0;class#DocHomeActivity#0" expanded="false" />
-            <element signature="method#onDialogPositiveClick#0;class#DocHomeActivity#0" expanded="false" />
             <element signature="docComment;method#closeKeyboard#0;class#DocHomeActivity#0" expanded="false" />
             <element signature="method#closeKeyboard#0;class#DocHomeActivity#0" expanded="false" />
             <element signature="docComment;method#getSchedule#0;class#DocHomeActivity#0" expanded="false" />
@@ -2488,26 +2128,230 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/DocCreateEditProfileActivity.java">
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_doc_editschedule.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33236152" vertical-offset="4340" max-vertical-offset="5440">
-          <caret line="262" column="0" selection-start-line="262" selection-start-column="0" selection-end-line="262" selection-end-column="0" />
+        <state vertical-scroll-proportion="-2.5185184" vertical-offset="0" max-vertical-offset="1360">
+          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_doc_editplace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5185184" vertical-offset="0" max-vertical-offset="357">
+          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#2052#2198#0" expanded="true" />
-            <element signature="e#2187#2188#0" expanded="true" />
-            <element signature="e#2407#2947#0" expanded="true" />
-            <element signature="e#2936#2937#0" expanded="true" />
-            <element signature="e#6213#6592#0" expanded="true" />
-            <element signature="e#6577#6578#0" expanded="true" />
-            <element signature="e#8020#8477#0" expanded="true" />
-            <element signature="e#8454#8455#0" expanded="true" />
-            <element signature="e#8543#8998#0" expanded="true" />
-            <element signature="e#8975#8976#0" expanded="true" />
-            <element signature="e#10868#10869#0" expanded="true" />
-            <element signature="e#10913#10914#0" expanded="true" />
+            <element signature="tag#LinearLayout#0;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#EditText#0;tag#LinearLayout#0;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#Button#0;tag#LinearLayout#0;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#LinearLayout#1;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#Spinner#0;tag#LinearLayout#1;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#Button#0;tag#LinearLayout#1;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#Button#1;tag#LinearLayout#1;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#Button#0;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#ListView#0;tag#LinearLayout#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_old_login.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_doc_createedit_profile.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29310346" vertical-offset="0" max-vertical-offset="306">
+          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+          <folding>
+            <element signature="tag#TextView#0;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#LinearLayout#0;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#EditText#0;tag#LinearLayout#0;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#LinearLayout#0;tag#LinearLayout#0;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#ProgressBar#0;tag#LinearLayout#0;tag#LinearLayout#0;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#EditText#1;tag#LinearLayout#0;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#LinearLayout#1;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#ImageButton#0;tag#LinearLayout#1;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#LinearLayout#0;tag#LinearLayout#1;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#EditText#0;tag#LinearLayout#0;tag#LinearLayout#1;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#EditText#1;tag#LinearLayout#0;tag#LinearLayout#1;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#TextView#0;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#EditText#0;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#EditText#1;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#EditText#2;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#CheckBox#0;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#LinearLayout#2;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#Button#0;tag#LinearLayout#2;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#Button#1;tag#LinearLayout#2;tag#LinearLayout#0;tag#ScrollView#0;tag#LinearLayout#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_patient_home.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29310346" vertical-offset="0" max-vertical-offset="323">
+          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+          <folding>
+            <element signature="tag#TextView#0;tag#LinearLayout#0" expanded="false" />
+            <element signature="tag#ListView#0;tag#LinearLayout#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/dialog_scheduleupdate.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.9259257" vertical-offset="0" max-vertical-offset="459">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding>
+            <element signature="e#248#270#0" expanded="false" />
+            <element signature="e#673#695#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="970" max-vertical-offset="1428">
+          <caret line="74" column="37" selection-start-line="74" selection-start-column="37" selection-end-line="74" selection-end-column="37" />
+          <folding>
+            <element signature="e#328#352#0" expanded="false" />
+            <element signature="e#2599#2626#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.64" vertical-offset="545" max-vertical-offset="918">
+          <caret line="33" column="63" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1003" max-vertical-offset="1462">
+          <caret line="72" column="30" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
+          <folding>
+            <element signature="e#791#809#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/SetPlaceUpdateFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.97791797" vertical-offset="897" max-vertical-offset="1683">
+          <caret line="83" column="19" selection-start-line="83" selection-start-column="19" selection-end-line="83" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/PatientHomeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1411">
+          <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/PatientViewScheduleActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+          <caret line="213" column="76" selection-start-line="213" selection-start-column="76" selection-end-line="213" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/java/com/sarangjoshi/docschedulerdoc/PatientViewWeeklyScheduleActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="172" max-vertical-offset="765">
+          <caret line="27" column="82" selection-start-line="27" selection-start-column="82" selection-end-line="27" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/layout_weeklysched_item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="323">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_patient_view_schedule.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="867">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="14" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/layout_weeklysched_group.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="340">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/src/main/res/layout/activity_patient_view_weekly_schedule.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="459">
+          <caret line="18" column="56" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docSchedulerDoc/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58318424" vertical-offset="31" max-vertical-offset="612">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

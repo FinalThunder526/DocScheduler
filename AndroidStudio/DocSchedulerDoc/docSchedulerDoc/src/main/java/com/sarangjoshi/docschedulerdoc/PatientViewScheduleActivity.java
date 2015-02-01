@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -29,28 +30,39 @@ public class PatientViewScheduleActivity extends Activity {
     private ParseObject todayUpdateObj;
     private String mObjectId, today;
 
-    private TextView doctorName, todayUpdate;
+    private TextView doctorName, todayUpdate, patTodayTitle;
+    private Button viewWeeklySched;
     private ListView placeListView;
     private ArrayAdapter<String> placeAdapter;
     private List<String> placeList;
 
     private Schedule mSchedule;
+    private Data mData;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_view_schedule);
 
-        mObjectId = getIntent().getStringExtra(PatientHomeActivity.DOC_ID);
-        mSchedule = new Schedule(this, true);
+        mData = new Data(this);
 
+        mObjectId = getIntent().getStringExtra(PatientHomeActivity.DOC_ID);
+        if (mObjectId == null)
+            mObjectId = mData.getCurrentDoctor();
+        else
+            mData.saveCurrentDoctor(mObjectId);
+
+
+        mSchedule = new Schedule(this, true);
         doctorName = (TextView) findViewById(R.id.patDoctorName);
         todayUpdate = (TextView) findViewById(R.id.patTodayUpdate);
+        patTodayTitle = (TextView) findViewById(R.id.patTodayTitle);
+        viewWeeklySched = (Button) findViewById(R.id.patViewWeeklySchedule);
         placeListView = (ListView) findViewById(R.id.patTodaySchedule);
         placeList = new ArrayList<>();
         placeAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, placeList);
         placeListView.setAdapter(placeAdapter);
-
-        loadDoctor();
+        if (mObjectId != null)
+            loadDoctor();
     }
 
     /**
@@ -142,11 +154,13 @@ public class PatientViewScheduleActivity extends Activity {
             // Places not empty
             //placesEmptyText.setVisibility(View.GONE);
             placeListView.setVisibility(View.VISIBLE);
+            patTodayTitle.setVisibility(View.VISIBLE);
             placeAdapter.notifyDataSetChanged();
         } else {
             // Places empty
             //placesEmptyText.setVisibility(View.VISIBLE);
             placeListView.setVisibility(View.GONE);
+            patTodayTitle.setVisibility(View.GONE);
         }
         loadUpdate();
     }
@@ -178,20 +192,26 @@ public class PatientViewScheduleActivity extends Activity {
                     } else {
                         todaysUpdate = (String) todayUpdateObj.get("status");
                     }
-                    todayUpdate.setText(todaysUpdate);
+                    todayUpdate.setText("Today's update: " + todaysUpdate);
                 }
+                viewWeeklySched.setVisibility(View.VISIBLE);
                 Data.d.dismiss();
             }
         });
     }
 
+    /**
+     * Opens Week view
+     * @param v
+     */
     public void viewWeeklySched(View v) {
         Intent intent = new Intent(this, PatientViewWeeklyScheduleActivity.class);
         ArrayList<String> placesAsStrings = new ArrayList<String>();
-        for(Place p : mSchedule.getPlaces()) {
+        for (Place p : mSchedule.getPlaces()) {
             placesAsStrings.add(p.getAsString());
         }
         intent.putStringArrayListExtra(Schedule.PLACES_AS_STRINGS_KEY, placesAsStrings);
+        intent.putExtra(PatientHomeActivity.DOC_NAME, doctorName.getText());
         startActivity(intent);
     }
 }

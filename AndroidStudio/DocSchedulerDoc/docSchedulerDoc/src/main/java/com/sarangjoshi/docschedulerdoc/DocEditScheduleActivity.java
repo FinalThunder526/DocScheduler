@@ -60,7 +60,7 @@ public class DocEditScheduleActivity extends Activity {
         });
 
         // Retrieving schedule
-        if(!schedule.isInitialized())
+        if (!schedule.isInitialized())
             retrieveSchedule();
     }
 
@@ -113,16 +113,25 @@ public class DocEditScheduleActivity extends Activity {
                 });
     }
 
+    /**
+     * When one of the radio buttons is clicked.
+     *
+     * @param v which radio button is clicked
+     */
     public void onRadioButtonClicked(View v) {
         boolean checked = ((RadioButton) v).isChecked();
         switch (v.getId()) {
             case R.id.deleteRadio:
-                if (checked)
+                if (checked && editStyle != EditStyle.DELETE) {
                     editStyle = EditStyle.DELETE;
+                    placesAdapter.notifyDataSetChanged();
+                }
                 break;
             case R.id.editRadio:
-                if (checked)
+                if (checked && editStyle != EditStyle.EDIT) {
                     editStyle = EditStyle.EDIT;
+                    placesAdapter.notifyDataSetChanged();
+                }
                 break;
         }
     }
@@ -132,9 +141,26 @@ public class DocEditScheduleActivity extends Activity {
      *
      * @param pos the position in the list of places.
      */
-    private void deletePlace(int pos) {
-        schedule.getPlaces().remove(pos);
-        placesAdapter.notifyDataSetChanged();
+    private void deletePlace(final int pos) {
+        DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                switch (which){
+                    case DialogInterface.BUTTON_POSITIVE:
+                        schedule.getPlaces().remove(pos);
+                        placesAdapter.notifyDataSetChanged();
+                        break;
+                    case DialogInterface.BUTTON_NEGATIVE:
+                        break;
+                }
+            }
+        };
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Are you sure you want to delete this place?")
+                .setPositiveButton("Yes", dialogClickListener)
+                .setNegativeButton("No", dialogClickListener)
+                .show();
     }
 
     public void addPlace(View v) {
@@ -158,7 +184,7 @@ public class DocEditScheduleActivity extends Activity {
         final Context mContext;
 
         public PlaceAdapter(Context context, List<Place> objects) {
-            super(context, R.layout.layout_place, objects);
+            super(context, R.layout.layout_doc_place, objects);
             mContext = context;
         }
 
@@ -166,10 +192,16 @@ public class DocEditScheduleActivity extends Activity {
             LayoutInflater inflater = (LayoutInflater) mContext
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-            View v = inflater.inflate(R.layout.layout_place, parent, false);
+            View v = inflater.inflate(R.layout.layout_doc_place, parent, false);
+            TextView tv = (TextView) v.findViewById(R.id.placeText);
+            ImageView iv = (ImageView) v.findViewById(R.id.placeMode);
 
-            ((TextView) v.findViewById(R.id.placeText)).setText(schedule.getPlace(pos)
+            tv.setText(schedule.getPlace(pos)
                     .toString());
+            if (editStyle == EditStyle.EDIT)
+                iv.setImageDrawable(getResources().getDrawable(R.drawable.ic_action_edit));
+            else
+                iv.setImageDrawable(getResources().getDrawable(R.drawable.ic_action_remove));
 
             return v;
         }

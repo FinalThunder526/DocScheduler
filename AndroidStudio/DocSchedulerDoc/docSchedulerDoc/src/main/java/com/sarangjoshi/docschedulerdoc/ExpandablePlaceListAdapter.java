@@ -61,7 +61,7 @@ public class ExpandablePlaceListAdapter extends BaseExpandableListAdapter {
     public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
         if(convertView == null) {
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.layout_weeklysched_group, null);
+            convertView = inflater.inflate(R.layout.layout_viewweeklysched_group, null);
         }
 
         TextView placeName = (TextView) convertView.findViewById(R.id.patientWeeklyGroup);
@@ -74,7 +74,7 @@ public class ExpandablePlaceListAdapter extends BaseExpandableListAdapter {
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
         if(convertView == null) {
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.layout_weeklysched_item, null);
+            convertView = inflater.inflate(R.layout.layout_viewweeklysched_item, null);
         }
 
         TextView dayTimeName = (TextView) convertView.findViewById(R.id.patientWeeklyItem);

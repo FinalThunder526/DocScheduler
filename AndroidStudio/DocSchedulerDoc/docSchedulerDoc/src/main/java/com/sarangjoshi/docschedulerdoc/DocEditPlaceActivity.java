@@ -9,8 +9,10 @@ package com.sarangjoshi.docschedulerdoc;
 import java.util.Calendar;
 import java.util.List;
 
+import android.app.AlertDialog;
 import android.app.TimePickerDialog.OnTimeSetListener;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -95,9 +97,26 @@ public class DocEditPlaceActivity extends FragmentActivity {
     /**
      * Deletes the DayTime object at the given position.
      */
-    private void delete(int position) {
-        place.getDayTimes().remove(position);
-        dayTimesAdapter.notifyDataSetChanged();
+    private void delete(final int position) {
+        DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                switch (which) {
+                    case DialogInterface.BUTTON_POSITIVE:
+                        place.getDayTimes().remove(position);
+                        dayTimesAdapter.notifyDataSetChanged();
+                        break;
+                    case DialogInterface.BUTTON_NEGATIVE:
+                        break;
+                }
+            }
+        };
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Delete?")
+                .setPositiveButton("Yes", dialogClickListener)
+                .setNegativeButton("No", dialogClickListener)
+                .show();
     }
 
     /**

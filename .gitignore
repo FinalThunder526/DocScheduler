@@ -5,7 +5,7 @@ AndroidStudio/DocSchedulerDoc/.idea/libraries
 AndroidStudio/DocSchedulerDoc.DS_Store
 AndroidStudio/DocSchedulerDoc/build
 
-AndroidStudio/DocSchedulerDoc/docSchedulerDoc/build
+AndroidStudio/DocSchedulerDoc/docSchedulerDoc/build/*
 AndroidStudio/DocSchedulerDoc/docSchedulerDoc/build.gradle
 AndroidStudio/DocSchedulerDoc/docSchedulerDoc/docSchedulerDoc.iml
 AndroidStudio/DocSchedulerDoc/facebookSDK/build
